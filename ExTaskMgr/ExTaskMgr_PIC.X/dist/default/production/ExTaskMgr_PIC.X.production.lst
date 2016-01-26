@@ -1,0 +1,2284 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.34 build -361300703 
+                                                                                               Mon Jan 25 23:41:31 2016
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 201502162209
+     1                           	processor	16F628A
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	strings,global,class=STRING,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	clrtext,global,class=CODE,delta=2
+     9                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    10                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    11                           	psect	maintext,global,class=CODE,split=1,delta=2
+    12                           	psect	text1,local,class=CODE,merge=1,delta=2
+    13                           	psect	text2,local,class=CODE,merge=1,delta=2
+    14                           	psect	text3,local,class=CODE,merge=1,delta=2
+    15                           	psect	text4,local,class=CODE,merge=1,delta=2
+    16                           	psect	text5,local,class=CODE,merge=1,delta=2
+    17                           	psect	text6,local,class=CODE,merge=1,delta=2
+    18                           	psect	text7,local,class=CODE,merge=1,delta=2
+    19                           	psect	text8,local,class=CODE,merge=1,delta=2
+    20                           	psect	text9,local,class=CODE,merge=1,delta=2
+    21                           	psect	text10,local,class=CODE,merge=1,delta=2
+    22                           	psect	text11,local,class=CODE,merge=1,delta=2
+    23                           	psect	text12,local,class=CODE,merge=1,delta=2
+    24                           	psect	swtext1,local,class=CONST,delta=2
+    25                           	psect	text13,local,class=CODE,merge=1,delta=2
+    26                           	psect	text14,local,class=CODE,merge=1,delta=2
+    27                           	psect	text15,local,class=CODE,merge=1,delta=2
+    28                           	psect	intentry,global,class=CODE,delta=2
+    29                           	psect	functab,global,reloc=256,class=CODE,delta=2
+    30                           	dabs	1,0x7E,2
+    31  0000                     	;# 
+    32  0001                     	;# 
+    33  0002                     	;# 
+    34  0003                     	;# 
+    35  0004                     	;# 
+    36  0005                     	;# 
+    37  0006                     	;# 
+    38  000A                     	;# 
+    39  000B                     	;# 
+    40  000C                     	;# 
+    41  000E                     	;# 
+    42  000E                     	;# 
+    43  000F                     	;# 
+    44  0010                     	;# 
+    45  0011                     	;# 
+    46  0012                     	;# 
+    47  0015                     	;# 
+    48  0015                     	;# 
+    49  0016                     	;# 
+    50  0017                     	;# 
+    51  0018                     	;# 
+    52  0019                     	;# 
+    53  001A                     	;# 
+    54  001F                     	;# 
+    55  0081                     	;# 
+    56  0085                     	;# 
+    57  0086                     	;# 
+    58  008C                     	;# 
+    59  008E                     	;# 
+    60  0092                     	;# 
+    61  0098                     	;# 
+    62  0099                     	;# 
+    63  009A                     	;# 
+    64  009B                     	;# 
+    65  009C                     	;# 
+    66  009D                     	;# 
+    67  009F                     	;# 
+    68  0000                     	;# 
+    69  0001                     	;# 
+    70  0002                     	;# 
+    71  0003                     	;# 
+    72  0004                     	;# 
+    73  0005                     	;# 
+    74  0006                     	;# 
+    75  000A                     	;# 
+    76  000B                     	;# 
+    77  000C                     	;# 
+    78  000E                     	;# 
+    79  000E                     	;# 
+    80  000F                     	;# 
+    81  0010                     	;# 
+    82  0011                     	;# 
+    83  0012                     	;# 
+    84  0015                     	;# 
+    85  0015                     	;# 
+    86  0016                     	;# 
+    87  0017                     	;# 
+    88  0018                     	;# 
+    89  0019                     	;# 
+    90  001A                     	;# 
+    91  001F                     	;# 
+    92  0081                     	;# 
+    93  0085                     	;# 
+    94  0086                     	;# 
+    95  008C                     	;# 
+    96  008E                     	;# 
+    97  0092                     	;# 
+    98  0098                     	;# 
+    99  0099                     	;# 
+   100  009A                     	;# 
+   101  009B                     	;# 
+   102  009C                     	;# 
+   103  009D                     	;# 
+   104  009F                     	;# 
+   105  0000                     	;# 
+   106  0001                     	;# 
+   107  0002                     	;# 
+   108  0003                     	;# 
+   109  0004                     	;# 
+   110  0005                     	;# 
+   111  0006                     	;# 
+   112  000A                     	;# 
+   113  000B                     	;# 
+   114  000C                     	;# 
+   115  000E                     	;# 
+   116  000E                     	;# 
+   117  000F                     	;# 
+   118  0010                     	;# 
+   119  0011                     	;# 
+   120  0012                     	;# 
+   121  0015                     	;# 
+   122  0015                     	;# 
+   123  0016                     	;# 
+   124  0017                     	;# 
+   125  0018                     	;# 
+   126  0019                     	;# 
+   127  001A                     	;# 
+   128  001F                     	;# 
+   129  0081                     	;# 
+   130  0085                     	;# 
+   131  0086                     	;# 
+   132  008C                     	;# 
+   133  008E                     	;# 
+   134  0092                     	;# 
+   135  0098                     	;# 
+   136  0099                     	;# 
+   137  009A                     	;# 
+   138  009B                     	;# 
+   139  009C                     	;# 
+   140  009D                     	;# 
+   141  009F                     	;# 
+   142  0000                     	;# 
+   143  0001                     	;# 
+   144  0002                     	;# 
+   145  0003                     	;# 
+   146  0004                     	;# 
+   147  0005                     	;# 
+   148  0006                     	;# 
+   149  000A                     	;# 
+   150  000B                     	;# 
+   151  000C                     	;# 
+   152  000E                     	;# 
+   153  000E                     	;# 
+   154  000F                     	;# 
+   155  0010                     	;# 
+   156  0011                     	;# 
+   157  0012                     	;# 
+   158  0015                     	;# 
+   159  0015                     	;# 
+   160  0016                     	;# 
+   161  0017                     	;# 
+   162  0018                     	;# 
+   163  0019                     	;# 
+   164  001A                     	;# 
+   165  001F                     	;# 
+   166  0081                     	;# 
+   167  0085                     	;# 
+   168  0086                     	;# 
+   169  008C                     	;# 
+   170  008E                     	;# 
+   171  0092                     	;# 
+   172  0098                     	;# 
+   173  0099                     	;# 
+   174  009A                     	;# 
+   175  009B                     	;# 
+   176  009C                     	;# 
+   177  009D                     	;# 
+   178  009F                     	;# 
+   179                           
+   180                           	psect	strings
+   181  001C                     __pstrings:	
+   182  001C                     stringtab:	
+   183  001C                     __stringtab:	
+   184  001C                     stringcode:	
+   185                           ;	String table - string pointers are 1 byte each
+   186                           
+   187  001C                     stringdir:	
+   188  001C  3000               	movlw	high stringdir
+   189  001D  008A               	movwf	10
+   190  001E  0804               	movf	4,w
+   191  001F  0A84               	incf	4,f
+   192  0020  0782               	addwf	2,f
+   193  0021                     __stringbase:	
+   194  0021  3400               	retlw	0
+   195  0022                     __end_of__stringtab:	
+   196  0022                     _NumerosBCD:	
+   197  0022  3400               	retlw	0
+   198  0023  3400               	retlw	0
+   199  0024  3400               	retlw	0
+   200  0025  3400               	retlw	0
+   201  0026  3401               	retlw	1
+   202  0027  3400               	retlw	0
+   203  0028  3400               	retlw	0
+   204  0029  3400               	retlw	0
+   205  002A  3400               	retlw	0
+   206  002B  3401               	retlw	1
+   207  002C  3400               	retlw	0
+   208  002D  3400               	retlw	0
+   209  002E  3401               	retlw	1
+   210  002F  3401               	retlw	1
+   211  0030  3400               	retlw	0
+   212  0031  3400               	retlw	0
+   213  0032  3400               	retlw	0
+   214  0033  3400               	retlw	0
+   215  0034  3401               	retlw	1
+   216  0035  3400               	retlw	0
+   217  0036  3401               	retlw	1
+   218  0037  3400               	retlw	0
+   219  0038  3401               	retlw	1
+   220  0039  3400               	retlw	0
+   221  003A  3400               	retlw	0
+   222  003B  3401               	retlw	1
+   223  003C  3401               	retlw	1
+   224  003D  3400               	retlw	0
+   225  003E  3401               	retlw	1
+   226  003F  3401               	retlw	1
+   227  0040  3401               	retlw	1
+   228  0041  3400               	retlw	0
+   229  0042  3400               	retlw	0
+   230  0043  3400               	retlw	0
+   231  0044  3400               	retlw	0
+   232  0045  3401               	retlw	1
+   233  0046  3401               	retlw	1
+   234  0047  3400               	retlw	0
+   235  0048  3400               	retlw	0
+   236  0049  3401               	retlw	1
+   237  004A                     __end_of_NumerosBCD:	
+   238  000B                     _INTCONbits	set	11
+   239  0002                     _PCL	set	2
+   240  000A                     _PCLATH	set	10
+   241  0006                     _PORTB	set	6
+   242  0001                     _TMR0	set	1
+   243  0028                     _RA0	set	40
+   244  0030                     _RB0	set	48
+   245  0031                     _RB1	set	49
+   246  0032                     _RB2	set	50
+   247  0033                     _RB3	set	51
+   248  0034                     _RB4	set	52
+   249  0035                     _RB5	set	53
+   250  0036                     _RB6	set	54
+   251  0037                     _RB7	set	55
+   252  005A                     _T0IF	set	90
+   253  005A                     _TMR0IF	set	90
+   254  0081                     _OPTION_REGbits	set	129
+   255  0085                     _TRISA	set	133
+   256  0086                     _TRISB	set	134
+   257                           
+   258                           ; #config settings
+   259  0000                     
+   260                           	psect	cinit
+   261  0011                     start_initialization:	
+   262  0011                     __initialization:	
+   263                           
+   264                           ; Clear objects allocated to COMMON
+   265  0011  3078               	movlw	low __pbssCOMMON
+   266  0012  0084               	movwf	4
+   267  0013  307C               	movlw	low (__pbssCOMMON+4)
+   268  0014  22FA               	fcall	clear_ram0
+   269                           
+   270                           ; Clear objects allocated to BANK0
+   271  0015  1383               	bcf	3,7	;select IRP bank0
+   272  0016  3020               	movlw	low __pbssBANK0
+   273  0017  0084               	movwf	4
+   274  0018  303C               	movlw	low (__pbssBANK0+28)
+   275  0019  22FA               	fcall	clear_ram0
+   276  001A                     end_of_initialization:	
+   277                           ;End of C runtime variable initialization code
+   278                           
+   279  001A                     __end_of__initialization:	
+   280  001A  0183               	clrf	3
+   281  001B  2A8F               	ljmp	_main	;jump to C main() function
+   282                           
+   283                           	psect	bssCOMMON
+   284  0078                     __pbssCOMMON:	
+   285  0078                     _TaskTimeout:	
+   286  0078                     	ds	2
+   287  007A                     _EnableTimeCounter:	
+   288  007A                     	ds	1
+   289  007B                     _TaskIsExecuting:	
+   290  007B                     	ds	1
+   291                           
+   292                           	psect	bssBANK0
+   293  0020                     __pbssBANK0:	
+   294  0020                     _RecentTasksTimeToExecute:	
+   295  0020                     	ds	8
+   296  0028                     _TimeScheduledTasks:	
+   297  0028                     	ds	8
+   298  0030                     _ScheduledTasks:	
+   299  0030                     	ds	4
+   300  0034                     _DisplayValue:	
+   301  0034                     	ds	3
+   302  0037                     _TimeCounterValue:	
+   303  0037                     	ds	3
+   304  003A                     _RecentDisplay:	
+   305  003A                     	ds	1
+   306  003B                     _Timer0IntGeneraed:	
+   307  003B                     	ds	1
+   308                           
+   309                           	psect	clrtext
+   310  02FA                     clear_ram0:	
+   311                           ;	Called with FSR containing the base address, and
+   312                           ;	W with the last address+1
+   313                           
+   314  02FA  0064               	clrwdt	;clear the watchdog before getting into this loop
+   315  02FB                     clrloop0:	
+   316  02FB  0180               	clrf	0	;clear RAM location pointed to by FSR
+   317  02FC  0A84               	incf	4,f	;increment pointer
+   318  02FD  0604               	xorwf	4,w	;XOR with final address
+   319  02FE  1903               	btfsc	3,2	;have we reached the end yet?
+   320  02FF  3400               	retlw	0	;all done for this memory range, return
+   321  0300  0604               	xorwf	4,w	;XOR again to restore value
+   322  0301  2AFB               	goto	clrloop0	;do the next byte
+   323                           
+   324                           	psect	cstackCOMMON
+   325  0070                     __pcstackCOMMON:	
+   326  0070                     ?_Task1:	
+   327  0070                     ?_Task2:	
+   328                           ; 0 bytes @ 0x0
+   329                           
+   330  0070                     ?_Task3:	
+   331                           ; 0 bytes @ 0x0
+   332                           
+   333  0070                     ?_Task4:	
+   334                           ; 0 bytes @ 0x0
+   335                           
+   336  0070                     ?_RefreshBreathingLight:	
+   337                           ; 0 bytes @ 0x0
+   338                           
+   339  0070                     ?_RefreshTimeCounter:	
+   340                           ; 0 bytes @ 0x0
+   341                           
+   342  0070                     ?_EnableOrDisableTimeCounter:	
+   343                           ; 0 bytes @ 0x0
+   344                           
+   345  0070                     ?_InitTimeCounter:	
+   346                           ; 0 bytes @ 0x0
+   347                           
+   348  0070                     ?_ConvertValue:	
+   349                           ; 0 bytes @ 0x0
+   350                           
+   351  0070                     ?_ConfigTimer0:	
+   352                           ; 0 bytes @ 0x0
+   353                           
+   354  0070                     ?_InitTasks:	
+   355                           ; 0 bytes @ 0x0
+   356                           
+   357  0070                     ?_ExecuteTask:	
+   358                           ; 0 bytes @ 0x0
+   359                           
+   360  0070                     ?_isr:	
+   361                           ; 0 bytes @ 0x0
+   362                           
+   363  0070                     ??_isr:	
+   364                           ; 0 bytes @ 0x0
+   365                           
+   366  0070                     ?_main:	
+   367                           ; 0 bytes @ 0x0
+   368                           
+   369                           
+   370                           ; 0 bytes @ 0x0
+   371  0070                     	ds	7
+   372  0077                     isr@i:	
+   373                           
+   374                           ; 1 bytes @ 0x7
+   375  0077                     	ds	1
+   376                           
+   377                           	psect	cstackBANK0
+   378  003C                     __pcstackBANK0:	
+   379  003C                     ??_Task2:	
+   380  003C                     ??_RefreshBreathingLight:	
+   381                           ; 0 bytes @ 0x0
+   382                           
+   383  003C                     ??_RefreshTimeCounter:	
+   384                           ; 0 bytes @ 0x0
+   385                           
+   386  003C                     ?_SetValuesDisplays:	
+   387                           ; 0 bytes @ 0x0
+   388                           
+   389  003C                     ??_EnableOrDisableTimeCounter:	
+   390                           ; 0 bytes @ 0x0
+   391                           
+   392  003C                     ??_InitTimeCounter:	
+   393                           ; 0 bytes @ 0x0
+   394                           
+   395  003C                     ??_ConvertValue:	
+   396                           ; 0 bytes @ 0x0
+   397                           
+   398  003C                     ??_ConfigTimer0:	
+   399                           ; 0 bytes @ 0x0
+   400                           
+   401  003C                     ??_InitTasks:	
+   402                           ; 0 bytes @ 0x0
+   403                           
+   404  003C                     SetValuesDisplays@SecondValue:	
+   405                           ; 0 bytes @ 0x0
+   406                           
+   407                           
+   408                           ; 1 bytes @ 0x0
+   409  003C                     	ds	1
+   410  003D                     EnableOrDisableTimeCounter@YesOrNo:	
+   411  003D                     SetValuesDisplays@ThirdValue:	
+   412                           ; 1 bytes @ 0x1
+   413                           
+   414                           
+   415                           ; 1 bytes @ 0x1
+   416  003D                     	ds	1
+   417  003E                     ??_Task4:	
+   418  003E                     ??_SetValuesDisplays:	
+   419                           ; 0 bytes @ 0x2
+   420                           
+   421  003E                     ConvertValue@Value:	
+   422                           ; 0 bytes @ 0x2
+   423                           
+   424                           
+   425                           ; 1 bytes @ 0x2
+   426  003E                     	ds	1
+   427  003F                     ?_WriteDisplay:	
+   428  003F                     WriteDisplay@DisplayToWrite:	
+   429                           ; 0 bytes @ 0x3
+   430                           
+   431  003F                     SetValuesDisplays@FirstValue:	
+   432                           ; 1 bytes @ 0x3
+   433                           
+   434                           
+   435                           ; 1 bytes @ 0x3
+   436  003F                     	ds	1
+   437  0040                     ??_Task3:	
+   438  0040                     ??_WriteDisplay:	
+   439                           ; 0 bytes @ 0x4
+   440                           
+   441  0040                     WriteDisplay@Value:	
+   442                           ; 0 bytes @ 0x4
+   443                           
+   444                           
+   445                           ; 1 bytes @ 0x4
+   446  0040                     	ds	1
+   447  0041                     ??_Task1:	
+   448                           
+   449                           ; 0 bytes @ 0x5
+   450  0041                     	ds	1
+   451  0042                     ??_ExecuteTask:	
+   452                           
+   453                           ; 0 bytes @ 0x6
+   454  0042                     	ds	4
+   455  0046                     ExecuteTask@i:	
+   456                           
+   457                           ; 1 bytes @ 0xA
+   458  0046                     	ds	1
+   459  0047                     ??_main:	
+   460                           
+   461                           	psect	maintext
+   462  028F                     __pmaintext:	
+   463                           ; 0 bytes @ 0xB
+   464 ;;
+   465 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   466 ;;
+   467 ;; *************** function _main *****************
+   468 ;; Defined at:
+   469 ;;		line 230 in file "MainTaskMng.c"
+   470 ;; Parameters:    Size  Location     Type
+   471 ;;		None
+   472 ;; Auto vars:     Size  Location     Type
+   473 ;;		None
+   474 ;; Return value:  Size  Location     Type
+   475 ;;		None               void
+   476 ;; Registers used:
+   477 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   478 ;; Tracked objects:
+   479 ;;		On entry : B00/0
+   480 ;;		On exit  : 0/0
+   481 ;;		Unchanged: 0/0
+   482 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   483 ;;      Params:         0       0       0       0
+   484 ;;      Locals:         0       0       0       0
+   485 ;;      Temps:          0       0       0       0
+   486 ;;      Totals:         0       0       0       0
+   487 ;;Total ram usage:        0 bytes
+   488 ;; Hardware stack levels required when called:    6
+   489 ;; This function calls:
+   490 ;;		_ConfigTimer0
+   491 ;;		_ExecuteTask
+   492 ;;		_InitTasks
+   493 ;;		_InitTimeCounter
+   494 ;;		_SetValuesDisplays
+   495 ;; This function is called by:
+   496 ;;		Startup code after reset
+   497 ;; This function uses a non-reentrant model
+   498 ;;
+   499                           
+   500                           
+   501                           ;psect for function _main
+   502  028F                     _main:	
+   503                           
+   504                           ;MainTaskMng.c: 232: TRISB = 0x00;
+   505                           
+   506                           ;incstack = 0
+   507                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   508  028F  1683               	bsf	3,5	;RP0=1, select bank1
+   509  0290  1303               	bcf	3,6	;RP1=0, select bank1
+   510  0291  0186               	clrf	6	;volatile
+   511                           
+   512                           ;MainTaskMng.c: 233: PORTB = 0;
+   513  0292  1283               	bcf	3,5	;RP0=0, select bank0
+   514  0293  1303               	bcf	3,6	;RP1=0, select bank0
+   515  0294  0186               	clrf	6	;volatile
+   516                           
+   517                           ;MainTaskMng.c: 235: TRISA = 0xFF;
+   518  0295  30FF               	movlw	255
+   519  0296  1683               	bsf	3,5	;RP0=1, select bank1
+   520  0297  1303               	bcf	3,6	;RP1=0, select bank1
+   521  0298  0085               	movwf	5	;volatile
+   522                           
+   523                           ;MainTaskMng.c: 238: SetValuesDisplays(0,0,0);
+   524  0299  1283               	bcf	3,5	;RP0=0, select bank0
+   525  029A  1303               	bcf	3,6	;RP1=0, select bank0
+   526  029B  01BC               	clrf	SetValuesDisplays@SecondValue
+   527  029C  01BD               	clrf	SetValuesDisplays@ThirdValue
+   528  029D  3000               	movlw	0
+   529  029E  22C1               	fcall	_SetValuesDisplays
+   530                           
+   531                           ;MainTaskMng.c: 241: InitTimeCounter();
+   532  029F  230A               	fcall	_InitTimeCounter
+   533                           
+   534                           ;MainTaskMng.c: 244: InitTasks();
+   535  02A0  2216               	fcall	_InitTasks
+   536                           
+   537                           ;MainTaskMng.c: 245: ConfigTimer0();
+   538  02A1  22D2               	fcall	_ConfigTimer0
+   539  02A2                     l976:	
+   540                           ;MainTaskMng.c: 248: while(1)
+   541                           
+   542                           
+   543                           ;MainTaskMng.c: 249: {
+   544                           ;MainTaskMng.c: 251: if ((Timer0IntGeneraed == 1) && (4))
+   545  02A2  1283               	bcf	3,5	;RP0=0, select bank0
+   546  02A3  1303               	bcf	3,6	;RP1=0, select bank0
+   547  02A4  033B               	decf	_Timer0IntGeneraed,w
+   548  02A5  1D03               	btfss	3,2
+   549  02A6  2AA2               	goto	l976
+   550                           
+   551                           ;MainTaskMng.c: 252: {
+   552                           ;MainTaskMng.c: 253: Timer0IntGeneraed = 0;
+   553  02A7  01BB               	clrf	_Timer0IntGeneraed
+   554                           
+   555                           ;MainTaskMng.c: 254: ExecuteTask();
+   556  02A8  21D0               	fcall	_ExecuteTask
+   557  02A9  2AA2               	goto	l976
+   558  02AA                     __end_of_main:	
+   559                           
+   560                           	psect	text1
+   561  0216                     __ptext1:	
+   562 ;; *************** function _InitTasks *****************
+   563 ;; Defined at:
+   564 ;;		line 105 in file "MainTaskMng.c"
+   565 ;; Parameters:    Size  Location     Type
+   566 ;;		None
+   567 ;; Auto vars:     Size  Location     Type
+   568 ;;		None
+   569 ;; Return value:  Size  Location     Type
+   570 ;;		None               void
+   571 ;; Registers used:
+   572 ;;		wreg, status,2
+   573 ;; Tracked objects:
+   574 ;;		On entry : 0/0
+   575 ;;		On exit  : 0/0
+   576 ;;		Unchanged: 0/0
+   577 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   578 ;;      Params:         0       0       0       0
+   579 ;;      Locals:         0       0       0       0
+   580 ;;      Temps:          0       1       0       0
+   581 ;;      Totals:         0       1       0       0
+   582 ;;Total ram usage:        1 bytes
+   583 ;; Hardware stack levels used:    1
+   584 ;; Hardware stack levels required when called:    1
+   585 ;; This function calls:
+   586 ;;		Nothing
+   587 ;; This function is called by:
+   588 ;;		_main
+   589 ;; This function uses a non-reentrant model
+   590 ;;
+   591                           
+   592                           
+   593                           ;psect for function _InitTasks
+   594  0216                     _InitTasks:	
+   595                           
+   596                           ;MainTaskMng.c: 108: ScheduledTasks[0] = Task1;
+   597                           
+   598                           ;incstack = 0
+   599                           ; Regs used in _InitTasks: [wreg+status,2]
+   600  0216  3002               	movlw	(low (fp__Task1-fpbase))& (0+255)
+   601  0217  1283               	bcf	3,5	;RP0=0, select bank0
+   602  0218  1303               	bcf	3,6	;RP1=0, select bank0
+   603  0219  00BC               	movwf	??_InitTasks
+   604  021A  083C               	movf	??_InitTasks,w
+   605  021B  00B0               	movwf	_ScheduledTasks
+   606                           
+   607                           ;MainTaskMng.c: 109: ScheduledTasks[1] = Task2;
+   608  021C  3003               	movlw	(low (fp__Task2-fpbase))& (0+255)
+   609  021D  00BC               	movwf	??_InitTasks
+   610  021E  083C               	movf	??_InitTasks,w
+   611  021F  00B1               	movwf	low ((_ScheduledTasks| 0+1))
+   612                           
+   613                           ;MainTaskMng.c: 110: ScheduledTasks[2] = Task3;
+   614  0220  3004               	movlw	(low (fp__Task3-fpbase))& (0+255)
+   615  0221  00BC               	movwf	??_InitTasks
+   616  0222  083C               	movf	??_InitTasks,w
+   617  0223  00B2               	movwf	low ((_ScheduledTasks| 0+2))
+   618                           
+   619                           ;MainTaskMng.c: 111: ScheduledTasks[3] = Task4;
+   620  0224  3001               	movlw	(low (fp__Task4-fpbase))& (0+255)
+   621  0225  00BC               	movwf	??_InitTasks
+   622  0226  083C               	movf	??_InitTasks,w
+   623  0227  00B3               	movwf	low ((_ScheduledTasks| 0+3))
+   624                           
+   625                           ;MainTaskMng.c: 114: TimeScheduledTasks[0] = 200;
+   626  0228  30C8               	movlw	200
+   627  0229  00A8               	movwf	_TimeScheduledTasks
+   628  022A  3000               	movlw	0
+   629  022B  00A9               	movwf	_TimeScheduledTasks+1
+   630                           
+   631                           ;MainTaskMng.c: 115: TimeScheduledTasks[1] = 1000;
+   632  022C  30E8               	movlw	232
+   633  022D  00AA               	movwf	_TimeScheduledTasks+2
+   634  022E  3003               	movlw	3
+   635  022F  00AB               	movwf	_TimeScheduledTasks+3
+   636                           
+   637                           ;MainTaskMng.c: 116: TimeScheduledTasks[2] = 1000;
+   638  0230  30E8               	movlw	232
+   639  0231  00AC               	movwf	_TimeScheduledTasks+4
+   640  0232  3003               	movlw	3
+   641  0233  00AD               	movwf	_TimeScheduledTasks+5
+   642                           
+   643                           ;MainTaskMng.c: 117: TimeScheduledTasks[3] = 100;
+   644  0234  3064               	movlw	100
+   645  0235  00AE               	movwf	_TimeScheduledTasks+6
+   646  0236  3000               	movlw	0
+   647  0237  00AF               	movwf	_TimeScheduledTasks+7
+   648                           
+   649                           ;MainTaskMng.c: 120: RecentTasksTimeToExecute[0] = 200;
+   650  0238  30C8               	movlw	200
+   651  0239  00A0               	movwf	_RecentTasksTimeToExecute
+   652  023A  3000               	movlw	0
+   653  023B  00A1               	movwf	_RecentTasksTimeToExecute+1
+   654                           
+   655                           ;MainTaskMng.c: 121: RecentTasksTimeToExecute[1] = 1000;
+   656  023C  30E8               	movlw	232
+   657  023D  00A2               	movwf	_RecentTasksTimeToExecute+2
+   658  023E  3003               	movlw	3
+   659  023F  00A3               	movwf	_RecentTasksTimeToExecute+3
+   660                           
+   661                           ;MainTaskMng.c: 122: RecentTasksTimeToExecute[2] = 1000;
+   662  0240  30E8               	movlw	232
+   663  0241  00A4               	movwf	_RecentTasksTimeToExecute+4
+   664  0242  3003               	movlw	3
+   665  0243  00A5               	movwf	_RecentTasksTimeToExecute+5
+   666                           
+   667                           ;MainTaskMng.c: 123: RecentTasksTimeToExecute[3] = 100;
+   668  0244  3064               	movlw	100
+   669  0245  00A6               	movwf	_RecentTasksTimeToExecute+6
+   670  0246  3000               	movlw	0
+   671  0247  00A7               	movwf	_RecentTasksTimeToExecute+7
+   672                           
+   673                           ;MainTaskMng.c: 126: TaskIsExecuting = 0;
+   674  0248  01FB               	clrf	_TaskIsExecuting	;volatile
+   675  0249  0008               	return
+   676  024A                     __end_of_InitTasks:	
+   677                           
+   678                           	psect	text2
+   679  01D0                     __ptext2:	
+   680 ;; *************** function _ExecuteTask *****************
+   681 ;; Defined at:
+   682 ;;		line 132 in file "MainTaskMng.c"
+   683 ;; Parameters:    Size  Location     Type
+   684 ;;		None
+   685 ;; Auto vars:     Size  Location     Type
+   686 ;;  i               1   10[BANK0 ] unsigned char 
+   687 ;; Return value:  Size  Location     Type
+   688 ;;		None               void
+   689 ;; Registers used:
+   690 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   691 ;; Tracked objects:
+   692 ;;		On entry : 0/0
+   693 ;;		On exit  : 0/0
+   694 ;;		Unchanged: 0/0
+   695 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   696 ;;      Params:         0       0       0       0
+   697 ;;      Locals:         0       1       0       0
+   698 ;;      Temps:          0       4       0       0
+   699 ;;      Totals:         0       5       0       0
+   700 ;;Total ram usage:        5 bytes
+   701 ;; Hardware stack levels used:    1
+   702 ;; Hardware stack levels required when called:    5
+   703 ;; This function calls:
+   704 ;;		_Task1
+   705 ;;		_Task2
+   706 ;;		_Task3
+   707 ;;		_Task4
+   708 ;; This function is called by:
+   709 ;;		_main
+   710 ;; This function uses a non-reentrant model
+   711 ;;
+   712                           
+   713                           
+   714                           ;psect for function _ExecuteTask
+   715  01D0                     _ExecuteTask:	
+   716                           
+   717                           ;MainTaskMng.c: 134: char i;
+   718                           ;MainTaskMng.c: 135: for (i=0; i<4; i++)
+   719                           
+   720                           ;incstack = 0
+   721                           ; Regs used in _ExecuteTask: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   722  01D0  1283               	bcf	3,5	;RP0=0, select bank0
+   723  01D1  1303               	bcf	3,6	;RP1=0, select bank0
+   724  01D2  01C6               	clrf	ExecuteTask@i
+   725  01D3                     L1:	
+   726  01D3  3004               	movlw	4
+   727  01D4  0246               	subwf	ExecuteTask@i,w
+   728  01D5  1803               	btfsc	3,0
+   729  01D6  0008               	return
+   730                           
+   731                           ;MainTaskMng.c: 136: {
+   732                           ;MainTaskMng.c: 138: if ((ScheduledTasks[i] != 0) && (RecentTasksTimeToExecute[i] == 0))
+   733  01D7  0846               	movf	ExecuteTask@i,w
+   734  01D8  3E30               	addlw	(low (_ScheduledTasks| 0))& (0+255)
+   735  01D9  0084               	movwf	4
+   736  01DA  1383               	bcf	3,7	;select IRP bank0
+   737  01DB  0800               	movf	0,w
+   738  01DC  1903               	btfsc	3,2
+   739  01DD  2A11               	goto	l926
+   740  01DE  0846               	movf	ExecuteTask@i,w
+   741  01DF  00C2               	movwf	??_ExecuteTask
+   742  01E0  0742               	addwf	??_ExecuteTask,w
+   743  01E1  3E20               	addlw	(low (_RecentTasksTimeToExecute| 0))& (0+255)
+   744  01E2  0084               	movwf	4
+   745  01E3  0800               	movf	0,w
+   746  01E4  00C3               	movwf	??_ExecuteTask+1
+   747  01E5  0A84               	incf	4,f
+   748  01E6  0800               	movf	0,w
+   749  01E7  00C4               	movwf	??_ExecuteTask+2
+   750  01E8  0843               	movf	??_ExecuteTask+1,w
+   751  01E9  0444               	iorwf	??_ExecuteTask+2,w
+   752  01EA  1D03               	btfss	3,2
+   753  01EB  2A11               	goto	l926
+   754                           
+   755                           ;MainTaskMng.c: 139: {
+   756                           ;MainTaskMng.c: 140: TaskIsExecuting = 1;
+   757  01EC  3001               	movlw	1
+   758  01ED  00C2               	movwf	??_ExecuteTask
+   759  01EE  0842               	movf	??_ExecuteTask,w
+   760  01EF  00FB               	movwf	_TaskIsExecuting	;volatile
+   761                           
+   762                           ;MainTaskMng.c: 141: TaskTimeout = 500;
+   763  01F0  30F4               	movlw	244
+   764  01F1  00F8               	movwf	_TaskTimeout
+   765  01F2  3001               	movlw	1
+   766  01F3  00F9               	movwf	_TaskTimeout+1
+   767                           
+   768                           ;MainTaskMng.c: 142: ScheduledTasks[i]();
+   769  01F4  0846               	movf	ExecuteTask@i,w
+   770  01F5  3E30               	addlw	(low (_ScheduledTasks| 0))& (0+255)
+   771  01F6  0084               	movwf	4
+   772  01F7  0800               	movf	0,w
+   773  01F8  2100               	fcall	fptable
+   774                           
+   775                           ;MainTaskMng.c: 143: TaskIsExecuting = 0;
+   776  01F9  01FB               	clrf	_TaskIsExecuting	;volatile
+   777                           
+   778                           ;MainTaskMng.c: 144: RecentTasksTimeToExecute[i] = TimeScheduledTasks[i];
+   779  01FA  1283               	bcf	3,5	;RP0=0, select bank0
+   780  01FB  1303               	bcf	3,6	;RP1=0, select bank0
+   781  01FC  0846               	movf	ExecuteTask@i,w
+   782  01FD  00C2               	movwf	??_ExecuteTask
+   783  01FE  0742               	addwf	??_ExecuteTask,w
+   784  01FF  3E28               	addlw	(low (_TimeScheduledTasks| 0))& (0+255)
+   785  0200  0084               	movwf	4
+   786  0201  1383               	bcf	3,7	;select IRP bank0
+   787  0202  0800               	movf	0,w
+   788  0203  00C3               	movwf	??_ExecuteTask+1
+   789  0204  0A84               	incf	4,f
+   790  0205  0800               	movf	0,w
+   791  0206  00C4               	movwf	??_ExecuteTask+2
+   792  0207  0846               	movf	ExecuteTask@i,w
+   793  0208  00C5               	movwf	??_ExecuteTask+3
+   794  0209  0745               	addwf	??_ExecuteTask+3,w
+   795  020A  3E20               	addlw	(low (_RecentTasksTimeToExecute| 0))& (0+255)
+   796  020B  0084               	movwf	4
+   797  020C  0843               	movf	??_ExecuteTask+1,w
+   798  020D  0080               	movwf	0
+   799  020E  0A84               	incf	4,f
+   800  020F  0844               	movf	??_ExecuteTask+2,w
+   801  0210  0080               	movwf	0
+   802  0211                     l926:	
+   803  0211  3001               	movlw	1
+   804  0212  00C2               	movwf	??_ExecuteTask
+   805  0213  0842               	movf	??_ExecuteTask,w
+   806  0214  07C6               	addwf	ExecuteTask@i,f
+   807  0215  29D3               	goto	L1
+   808  0216                     __end_of_ExecuteTask:	
+   809                           
+   810                           	psect	text3
+   811  02E2                     __ptext3:	
+   812 ;; *************** function _Task3 *****************
+   813 ;; Defined at:
+   814 ;;		line 173 in file "MainTaskMng.c"
+   815 ;; Parameters:    Size  Location     Type
+   816 ;;		None
+   817 ;; Auto vars:     Size  Location     Type
+   818 ;;		None
+   819 ;; Return value:  Size  Location     Type
+   820 ;;		None               void
+   821 ;; Registers used:
+   822 ;;		wreg, status,2, status,0, pclath, cstack
+   823 ;; Tracked objects:
+   824 ;;		On entry : 0/0
+   825 ;;		On exit  : 0/0
+   826 ;;		Unchanged: 0/0
+   827 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   828 ;;      Params:         0       0       0       0
+   829 ;;      Locals:         0       0       0       0
+   830 ;;      Temps:          0       2       0       0
+   831 ;;      Totals:         0       2       0       0
+   832 ;;Total ram usage:        2 bytes
+   833 ;; Hardware stack levels used:    1
+   834 ;; Hardware stack levels required when called:    3
+   835 ;; This function calls:
+   836 ;;		_RefreshTimeCounter
+   837 ;;		_SetValuesDisplays
+   838 ;; This function is called by:
+   839 ;;		_InitTasks
+   840 ;;		_ExecuteTask
+   841 ;; This function uses a non-reentrant model
+   842 ;;
+   843                           
+   844                           
+   845                           ;psect for function _Task3
+   846  02E2                     _Task3:	
+   847                           
+   848                           ;MainTaskMng.c: 175: RefreshTimeCounter();
+   849                           
+   850                           ;incstack = 0
+   851                           ; Regs used in _Task3: [wreg+status,2+status,0+pclath+cstack]
+   852  02E2  226E               	fcall	_RefreshTimeCounter
+   853                           
+   854                           ;MainTaskMng.c: 176: SetValuesDisplays(TimeCounterValue[0], TimeCounterValue[1], TimeCou
+      +                          nterValue[2]);
+   855  02E3  1283               	bcf	3,5	;RP0=0, select bank0
+   856  02E4  1303               	bcf	3,6	;RP1=0, select bank0
+   857  02E5  0838               	movf	_TimeCounterValue+1,w
+   858  02E6  00C0               	movwf	??_Task3
+   859  02E7  0840               	movf	??_Task3,w
+   860  02E8  00BC               	movwf	SetValuesDisplays@SecondValue
+   861  02E9  0839               	movf	_TimeCounterValue+2,w
+   862  02EA  00C1               	movwf	??_Task3+1
+   863  02EB  0841               	movf	??_Task3+1,w
+   864  02EC  00BD               	movwf	SetValuesDisplays@ThirdValue
+   865  02ED  0837               	movf	_TimeCounterValue,w
+   866  02EE  22C1               	fcall	_SetValuesDisplays
+   867  02EF  0008               	return
+   868  02F0                     __end_of_Task3:	
+   869                           
+   870                           	psect	text4
+   871  0315                     __ptext4:	
+   872 ;; *************** function _Task2 *****************
+   873 ;; Defined at:
+   874 ;;		line 165 in file "MainTaskMng.c"
+   875 ;; Parameters:    Size  Location     Type
+   876 ;;		None
+   877 ;; Auto vars:     Size  Location     Type
+   878 ;;		None
+   879 ;; Return value:  Size  Location     Type
+   880 ;;		None               void
+   881 ;; Registers used:
+   882 ;;		wreg, status,2, status,0, pclath, cstack
+   883 ;; Tracked objects:
+   884 ;;		On entry : 0/0
+   885 ;;		On exit  : 0/0
+   886 ;;		Unchanged: 0/0
+   887 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   888 ;;      Params:         0       0       0       0
+   889 ;;      Locals:         0       0       0       0
+   890 ;;      Temps:          0       0       0       0
+   891 ;;      Totals:         0       0       0       0
+   892 ;;Total ram usage:        0 bytes
+   893 ;; Hardware stack levels used:    1
+   894 ;; Hardware stack levels required when called:    2
+   895 ;; This function calls:
+   896 ;;		_RefreshBreathingLight
+   897 ;; This function is called by:
+   898 ;;		_InitTasks
+   899 ;;		_ExecuteTask
+   900 ;; This function uses a non-reentrant model
+   901 ;;
+   902                           
+   903                           
+   904                           ;psect for function _Task2
+   905  0315                     _Task2:	
+   906                           
+   907                           ;MainTaskMng.c: 167: RefreshBreathingLight();
+   908                           
+   909                           ;incstack = 0
+   910                           ; Regs used in _Task2: [wreg+status,2+status,0+pclath+cstack]
+   911  0315  2310               	fcall	_RefreshBreathingLight
+   912  0316  0008               	return
+   913  0317                     __end_of_Task2:	
+   914                           
+   915                           	psect	text5
+   916  02AA                     __ptext5:	
+   917 ;; *************** function _Task1 *****************
+   918 ;; Defined at:
+   919 ;;		line 152 in file "MainTaskMng.c"
+   920 ;; Parameters:    Size  Location     Type
+   921 ;;		None
+   922 ;; Auto vars:     Size  Location     Type
+   923 ;;		None
+   924 ;; Return value:  Size  Location     Type
+   925 ;;		None               void
+   926 ;; Registers used:
+   927 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   928 ;; Tracked objects:
+   929 ;;		On entry : 0/0
+   930 ;;		On exit  : 0/0
+   931 ;;		Unchanged: 0/0
+   932 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   933 ;;      Params:         0       0       0       0
+   934 ;;      Locals:         0       0       0       0
+   935 ;;      Temps:          0       1       0       0
+   936 ;;      Totals:         0       1       0       0
+   937 ;;Total ram usage:        1 bytes
+   938 ;; Hardware stack levels used:    1
+   939 ;; Hardware stack levels required when called:    4
+   940 ;; This function calls:
+   941 ;;		_WriteDisplay
+   942 ;; This function is called by:
+   943 ;;		_InitTasks
+   944 ;;		_ExecuteTask
+   945 ;; This function uses a non-reentrant model
+   946 ;;
+   947                           
+   948                           
+   949                           ;psect for function _Task1
+   950  02AA                     _Task1:	
+   951                           
+   952                           ;MainTaskMng.c: 154: if (RecentDisplay > 2)
+   953                           
+   954                           ;incstack = 0
+   955                           ; Regs used in _Task1: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   956  02AA  3003               	movlw	3
+   957  02AB  1283               	bcf	3,5	;RP0=0, select bank0
+   958  02AC  1303               	bcf	3,6	;RP1=0, select bank0
+   959  02AD  023A               	subwf	_RecentDisplay,w
+   960  02AE  1803               	btfsc	3,0
+   961                           
+   962                           ;MainTaskMng.c: 155: RecentDisplay = 0;
+   963  02AF  01BA               	clrf	_RecentDisplay
+   964                           
+   965                           ;MainTaskMng.c: 157: WriteDisplay(DisplayValue[RecentDisplay], RecentDisplay);
+   966  02B0  083A               	movf	_RecentDisplay,w
+   967  02B1  00C1               	movwf	??_Task1
+   968  02B2  0841               	movf	??_Task1,w
+   969  02B3  00BF               	movwf	WriteDisplay@DisplayToWrite
+   970  02B4  083A               	movf	_RecentDisplay,w
+   971  02B5  3E34               	addlw	(low (_DisplayValue| 0))& (0+255)
+   972  02B6  0084               	movwf	4
+   973  02B7  1383               	bcf	3,7	;select IRP bank0
+   974  02B8  0800               	movf	0,w
+   975  02B9  224A               	fcall	_WriteDisplay
+   976                           
+   977                           ;MainTaskMng.c: 159: RecentDisplay++;
+   978  02BA  3001               	movlw	1
+   979  02BB  1283               	bcf	3,5	;RP0=0, select bank0
+   980  02BC  1303               	bcf	3,6	;RP1=0, select bank0
+   981  02BD  00C1               	movwf	??_Task1
+   982  02BE  0841               	movf	??_Task1,w
+   983  02BF  07BA               	addwf	_RecentDisplay,f
+   984  02C0  0008               	return
+   985  02C1                     __end_of_Task1:	
+   986                           
+   987                           	psect	text6
+   988  02F0                     __ptext6:	
+   989 ;; *************** function _Task4 *****************
+   990 ;; Defined at:
+   991 ;;		line 182 in file "MainTaskMng.c"
+   992 ;; Parameters:    Size  Location     Type
+   993 ;;		None
+   994 ;; Auto vars:     Size  Location     Type
+   995 ;;		None
+   996 ;; Return value:  Size  Location     Type
+   997 ;;		None               void
+   998 ;; Registers used:
+   999 ;;		wreg, status,2, status,0, pclath, cstack
+  1000 ;; Tracked objects:
+  1001 ;;		On entry : 0/0
+  1002 ;;		On exit  : 0/0
+  1003 ;;		Unchanged: 0/0
+  1004 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1005 ;;      Params:         0       0       0       0
+  1006 ;;      Locals:         0       0       0       0
+  1007 ;;      Temps:          0       0       0       0
+  1008 ;;      Totals:         0       0       0       0
+  1009 ;;Total ram usage:        0 bytes
+  1010 ;; Hardware stack levels used:    1
+  1011 ;; Hardware stack levels required when called:    2
+  1012 ;; This function calls:
+  1013 ;;		_EnableOrDisableTimeCounter
+  1014 ;; This function is called by:
+  1015 ;;		_InitTasks
+  1016 ;;		_ExecuteTask
+  1017 ;; This function uses a non-reentrant model
+  1018 ;;
+  1019                           
+  1020                           
+  1021                           ;psect for function _Task4
+  1022  02F0                     _Task4:	
+  1023                           
+  1024                           ;MainTaskMng.c: 184: if (RA0 == 1)
+  1025                           
+  1026                           ;incstack = 0
+  1027                           ; Regs used in _Task4: [wreg+status,2+status,0+pclath+cstack]
+  1028  02F0  1283               	bcf	3,5	;RP0=0, select bank0
+  1029  02F1  1303               	bcf	3,6	;RP1=0, select bank0
+  1030  02F2  1C05               	btfss	5,0	;volatile
+  1031  02F3  2AF7               	goto	l888
+  1032                           
+  1033                           ;MainTaskMng.c: 185: EnableOrDisableTimeCounter(1);
+  1034  02F4  3001               	movlw	1
+  1035  02F5  2302               	fcall	_EnableOrDisableTimeCounter
+  1036  02F6  0008               	return
+  1037  02F7                     l888:	
+  1038                           
+  1039                           ;MainTaskMng.c: 186: else
+  1040                           ;MainTaskMng.c: 187: EnableOrDisableTimeCounter(0);
+  1041  02F7  3000               	movlw	0
+  1042  02F8  2302               	fcall	_EnableOrDisableTimeCounter
+  1043  02F9  0008               	return
+  1044  02FA                     __end_of_Task4:	
+  1045                           
+  1046                           	psect	text7
+  1047  0302                     __ptext7:	
+  1048 ;; *************** function _EnableOrDisableTimeCounter *****************
+  1049 ;; Defined at:
+  1050 ;;		line 53 in file "TimeCounter.c"
+  1051 ;; Parameters:    Size  Location     Type
+  1052 ;;  YesOrNo         1    wreg     unsigned char 
+  1053 ;; Auto vars:     Size  Location     Type
+  1054 ;;  YesOrNo         1    1[BANK0 ] unsigned char 
+  1055 ;; Return value:  Size  Location     Type
+  1056 ;;		None               void
+  1057 ;; Registers used:
+  1058 ;;		wreg
+  1059 ;; Tracked objects:
+  1060 ;;		On entry : 0/0
+  1061 ;;		On exit  : 0/0
+  1062 ;;		Unchanged: 0/0
+  1063 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1064 ;;      Params:         0       0       0       0
+  1065 ;;      Locals:         0       1       0       0
+  1066 ;;      Temps:          0       1       0       0
+  1067 ;;      Totals:         0       2       0       0
+  1068 ;;Total ram usage:        2 bytes
+  1069 ;; Hardware stack levels used:    1
+  1070 ;; Hardware stack levels required when called:    1
+  1071 ;; This function calls:
+  1072 ;;		Nothing
+  1073 ;; This function is called by:
+  1074 ;;		_Task4
+  1075 ;; This function uses a non-reentrant model
+  1076 ;;
+  1077                           
+  1078                           
+  1079                           ;psect for function _EnableOrDisableTimeCounter
+  1080  0302                     _EnableOrDisableTimeCounter:	
+  1081                           
+  1082                           ;incstack = 0
+  1083                           ; Regs used in _EnableOrDisableTimeCounter: [wreg]
+  1084                           ;EnableOrDisableTimeCounter@YesOrNo stored from wreg
+  1085  0302  1283               	bcf	3,5	;RP0=0, select bank0
+  1086  0303  1303               	bcf	3,6	;RP1=0, select bank0
+  1087  0304  00BD               	movwf	EnableOrDisableTimeCounter@YesOrNo
+  1088                           
+  1089                           ;TimeCounter.c: 55: EnableTimeCounter = YesOrNo;
+  1090  0305  083D               	movf	EnableOrDisableTimeCounter@YesOrNo,w
+  1091  0306  00BC               	movwf	??_EnableOrDisableTimeCounter
+  1092  0307  083C               	movf	??_EnableOrDisableTimeCounter,w
+  1093  0308  00FA               	movwf	_EnableTimeCounter
+  1094  0309  0008               	return
+  1095  030A                     __end_of_EnableOrDisableTimeCounter:	
+  1096                           
+  1097                           	psect	text8
+  1098  02C1                     __ptext8:	
+  1099 ;; *************** function _SetValuesDisplays *****************
+  1100 ;; Defined at:
+  1101 ;;		line 79 in file "Display7Segs.c"
+  1102 ;; Parameters:    Size  Location     Type
+  1103 ;;  FirstValue      1    wreg     unsigned char 
+  1104 ;;  SecondValue     1    0[BANK0 ] unsigned char 
+  1105 ;;  ThirdValue      1    1[BANK0 ] unsigned char 
+  1106 ;; Auto vars:     Size  Location     Type
+  1107 ;;  FirstValue      1    3[BANK0 ] unsigned char 
+  1108 ;; Return value:  Size  Location     Type
+  1109 ;;		None               void
+  1110 ;; Registers used:
+  1111 ;;		wreg, status,2
+  1112 ;; Tracked objects:
+  1113 ;;		On entry : 0/0
+  1114 ;;		On exit  : 0/0
+  1115 ;;		Unchanged: 0/0
+  1116 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1117 ;;      Params:         0       2       0       0
+  1118 ;;      Locals:         0       1       0       0
+  1119 ;;      Temps:          0       1       0       0
+  1120 ;;      Totals:         0       4       0       0
+  1121 ;;Total ram usage:        4 bytes
+  1122 ;; Hardware stack levels used:    1
+  1123 ;; Hardware stack levels required when called:    1
+  1124 ;; This function calls:
+  1125 ;;		Nothing
+  1126 ;; This function is called by:
+  1127 ;;		_Task3
+  1128 ;;		_main
+  1129 ;; This function uses a non-reentrant model
+  1130 ;;
+  1131                           
+  1132                           
+  1133                           ;psect for function _SetValuesDisplays
+  1134  02C1                     _SetValuesDisplays:	
+  1135                           
+  1136                           ;incstack = 0
+  1137                           ; Regs used in _SetValuesDisplays: [wreg+status,2]
+  1138                           ;SetValuesDisplays@FirstValue stored from wreg
+  1139  02C1  1283               	bcf	3,5	;RP0=0, select bank0
+  1140  02C2  1303               	bcf	3,6	;RP1=0, select bank0
+  1141  02C3  00BF               	movwf	SetValuesDisplays@FirstValue
+  1142                           
+  1143                           ;Display7Segs.c: 81: RecentDisplay = 0;
+  1144  02C4  01BA               	clrf	_RecentDisplay
+  1145                           
+  1146                           ;Display7Segs.c: 82: DisplayValue[0] = FirstValue;
+  1147  02C5  083F               	movf	SetValuesDisplays@FirstValue,w
+  1148  02C6  00BE               	movwf	??_SetValuesDisplays
+  1149  02C7  083E               	movf	??_SetValuesDisplays,w
+  1150  02C8  00B4               	movwf	_DisplayValue
+  1151                           
+  1152                           ;Display7Segs.c: 83: DisplayValue[1] = SecondValue;
+  1153  02C9  083C               	movf	SetValuesDisplays@SecondValue,w
+  1154  02CA  00BE               	movwf	??_SetValuesDisplays
+  1155  02CB  083E               	movf	??_SetValuesDisplays,w
+  1156  02CC  00B5               	movwf	_DisplayValue+1
+  1157                           
+  1158                           ;Display7Segs.c: 84: DisplayValue[2] = ThirdValue;
+  1159  02CD  083D               	movf	SetValuesDisplays@ThirdValue,w
+  1160  02CE  00BE               	movwf	??_SetValuesDisplays
+  1161  02CF  083E               	movf	??_SetValuesDisplays,w
+  1162  02D0  00B6               	movwf	_DisplayValue+2
+  1163  02D1  0008               	return
+  1164  02D2                     __end_of_SetValuesDisplays:	
+  1165                           
+  1166                           	psect	text9
+  1167  026E                     __ptext9:	
+  1168 ;; *************** function _RefreshTimeCounter *****************
+  1169 ;; Defined at:
+  1170 ;;		line 25 in file "TimeCounter.c"
+  1171 ;; Parameters:    Size  Location     Type
+  1172 ;;		None
+  1173 ;; Auto vars:     Size  Location     Type
+  1174 ;;		None
+  1175 ;; Return value:  Size  Location     Type
+  1176 ;;		None               void
+  1177 ;; Registers used:
+  1178 ;;		wreg, status,2, status,0, pclath, cstack
+  1179 ;; Tracked objects:
+  1180 ;;		On entry : 0/0
+  1181 ;;		On exit  : 0/0
+  1182 ;;		Unchanged: 0/0
+  1183 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1184 ;;      Params:         0       0       0       0
+  1185 ;;      Locals:         0       0       0       0
+  1186 ;;      Temps:          0       1       0       0
+  1187 ;;      Totals:         0       1       0       0
+  1188 ;;Total ram usage:        1 bytes
+  1189 ;; Hardware stack levels used:    1
+  1190 ;; Hardware stack levels required when called:    2
+  1191 ;; This function calls:
+  1192 ;;		_InitTimeCounter
+  1193 ;; This function is called by:
+  1194 ;;		_Task3
+  1195 ;; This function uses a non-reentrant model
+  1196 ;;
+  1197                           
+  1198                           
+  1199                           ;psect for function _RefreshTimeCounter
+  1200  026E                     _RefreshTimeCounter:	
+  1201                           
+  1202                           ;TimeCounter.c: 27: if (!EnableTimeCounter)
+  1203                           
+  1204                           ;incstack = 0
+  1205                           ; Regs used in _RefreshTimeCounter: [wreg+status,2+status,0+pclath+cstack]
+  1206  026E  087A               	movf	_EnableTimeCounter,w
+  1207  026F  1903               	btfsc	3,2
+  1208  0270  0008               	return
+  1209                           
+  1210                           ;TimeCounter.c: 30: TimeCounterValue[2]++;
+  1211                           
+  1212                           ;TimeCounter.c: 28: return;
+  1213  0271  3001               	movlw	1
+  1214  0272  1283               	bcf	3,5	;RP0=0, select bank0
+  1215  0273  1303               	bcf	3,6	;RP1=0, select bank0
+  1216  0274  00BC               	movwf	??_RefreshTimeCounter
+  1217  0275  083C               	movf	??_RefreshTimeCounter,w
+  1218  0276  07B9               	addwf	_TimeCounterValue+2,f
+  1219                           
+  1220                           ;TimeCounter.c: 32: if (TimeCounterValue[2] > 9)
+  1221  0277  300A               	movlw	10
+  1222  0278  0239               	subwf	_TimeCounterValue+2,w
+  1223  0279  1C03               	skipc
+  1224  027A  2A80               	goto	l852
+  1225                           
+  1226                           ;TimeCounter.c: 33: {
+  1227                           ;TimeCounter.c: 34: TimeCounterValue[2] = 0;
+  1228  027B  01B9               	clrf	_TimeCounterValue+2
+  1229                           
+  1230                           ;TimeCounter.c: 35: TimeCounterValue[1]++;
+  1231  027C  3001               	movlw	1
+  1232  027D  00BC               	movwf	??_RefreshTimeCounter
+  1233  027E  083C               	movf	??_RefreshTimeCounter,w
+  1234  027F  07B8               	addwf	_TimeCounterValue+1,f
+  1235  0280                     l852:	
+  1236                           
+  1237                           ;TimeCounter.c: 36: }
+  1238                           ;TimeCounter.c: 38: if (TimeCounterValue[1] > 9)
+  1239  0280  300A               	movlw	10
+  1240  0281  0238               	subwf	_TimeCounterValue+1,w
+  1241  0282  1C03               	skipc
+  1242  0283  2A89               	goto	l858
+  1243                           
+  1244                           ;TimeCounter.c: 39: {
+  1245                           ;TimeCounter.c: 40: TimeCounterValue[1] = 0;
+  1246  0284  01B8               	clrf	_TimeCounterValue+1
+  1247                           
+  1248                           ;TimeCounter.c: 41: TimeCounterValue[0]++;
+  1249  0285  3001               	movlw	1
+  1250  0286  00BC               	movwf	??_RefreshTimeCounter
+  1251  0287  083C               	movf	??_RefreshTimeCounter,w
+  1252  0288  07B7               	addwf	_TimeCounterValue,f
+  1253  0289                     l858:	
+  1254                           
+  1255                           ;TimeCounter.c: 42: }
+  1256                           ;TimeCounter.c: 44: if (TimeCounterValue[0] > 9)
+  1257  0289  300A               	movlw	10
+  1258  028A  0237               	subwf	_TimeCounterValue,w
+  1259  028B  1C03               	skipc
+  1260  028C  0008               	return
+  1261                           
+  1262                           ;TimeCounter.c: 45: InitTimeCounter();
+  1263  028D  230A               	fcall	_InitTimeCounter
+  1264  028E  0008               	return
+  1265  028F                     __end_of_RefreshTimeCounter:	
+  1266                           
+  1267                           	psect	text10
+  1268  030A                     __ptext10:	
+  1269 ;; *************** function _InitTimeCounter *****************
+  1270 ;; Defined at:
+  1271 ;;		line 15 in file "TimeCounter.c"
+  1272 ;; Parameters:    Size  Location     Type
+  1273 ;;		None
+  1274 ;; Auto vars:     Size  Location     Type
+  1275 ;;		None
+  1276 ;; Return value:  Size  Location     Type
+  1277 ;;		None               void
+  1278 ;; Registers used:
+  1279 ;;		status,2
+  1280 ;; Tracked objects:
+  1281 ;;		On entry : 0/0
+  1282 ;;		On exit  : 0/0
+  1283 ;;		Unchanged: 0/0
+  1284 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1285 ;;      Params:         0       0       0       0
+  1286 ;;      Locals:         0       0       0       0
+  1287 ;;      Temps:          0       0       0       0
+  1288 ;;      Totals:         0       0       0       0
+  1289 ;;Total ram usage:        0 bytes
+  1290 ;; Hardware stack levels used:    1
+  1291 ;; Hardware stack levels required when called:    1
+  1292 ;; This function calls:
+  1293 ;;		Nothing
+  1294 ;; This function is called by:
+  1295 ;;		_main
+  1296 ;;		_RefreshTimeCounter
+  1297 ;; This function uses a non-reentrant model
+  1298 ;;
+  1299                           
+  1300                           
+  1301                           ;psect for function _InitTimeCounter
+  1302  030A                     _InitTimeCounter:	
+  1303                           
+  1304                           ;TimeCounter.c: 17: TimeCounterValue[0] = 0;
+  1305                           
+  1306                           ;incstack = 0
+  1307                           ; Regs used in _InitTimeCounter: [status,2]
+  1308  030A  1283               	bcf	3,5	;RP0=0, select bank0
+  1309  030B  1303               	bcf	3,6	;RP1=0, select bank0
+  1310  030C  01B7               	clrf	_TimeCounterValue
+  1311                           
+  1312                           ;TimeCounter.c: 18: TimeCounterValue[1] = 0;
+  1313  030D  01B8               	clrf	_TimeCounterValue+1
+  1314                           
+  1315                           ;TimeCounter.c: 19: TimeCounterValue[2] = 0;
+  1316  030E  01B9               	clrf	_TimeCounterValue+2
+  1317  030F  0008               	return
+  1318  0310                     __end_of_InitTimeCounter:	
+  1319                           
+  1320                           	psect	text11
+  1321  0310                     __ptext11:	
+  1322 ;; *************** function _RefreshBreathingLight *****************
+  1323 ;; Defined at:
+  1324 ;;		line 14 in file "BreathingLight.c"
+  1325 ;; Parameters:    Size  Location     Type
+  1326 ;;		None
+  1327 ;; Auto vars:     Size  Location     Type
+  1328 ;;		None
+  1329 ;; Return value:  Size  Location     Type
+  1330 ;;		None               void
+  1331 ;; Registers used:
+  1332 ;;		wreg
+  1333 ;; Tracked objects:
+  1334 ;;		On entry : 0/0
+  1335 ;;		On exit  : 0/0
+  1336 ;;		Unchanged: 0/0
+  1337 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1338 ;;      Params:         0       0       0       0
+  1339 ;;      Locals:         0       0       0       0
+  1340 ;;      Temps:          0       0       0       0
+  1341 ;;      Totals:         0       0       0       0
+  1342 ;;Total ram usage:        0 bytes
+  1343 ;; Hardware stack levels used:    1
+  1344 ;; Hardware stack levels required when called:    1
+  1345 ;; This function calls:
+  1346 ;;		Nothing
+  1347 ;; This function is called by:
+  1348 ;;		_Task2
+  1349 ;; This function uses a non-reentrant model
+  1350 ;;
+  1351                           
+  1352                           
+  1353                           ;psect for function _RefreshBreathingLight
+  1354  0310                     _RefreshBreathingLight:	
+  1355                           
+  1356                           ;BreathingLight.c: 16: RB7 = ~RB7;
+  1357                           
+  1358                           ;incstack = 0
+  1359                           ; Regs used in _RefreshBreathingLight: [wreg]
+  1360  0310  3080               	movlw	128
+  1361  0311  1283               	bcf	3,5	;RP0=0, select bank0
+  1362  0312  1303               	bcf	3,6	;RP1=0, select bank0
+  1363  0313  0686               	xorwf	6,f
+  1364  0314  0008               	return
+  1365  0315                     __end_of_RefreshBreathingLight:	
+  1366                           
+  1367                           	psect	text12
+  1368  024A                     __ptext12:	
+  1369 ;; *************** function _WriteDisplay *****************
+  1370 ;; Defined at:
+  1371 ;;		line 29 in file "Display7Segs.c"
+  1372 ;; Parameters:    Size  Location     Type
+  1373 ;;  Value           1    wreg     unsigned char 
+  1374 ;;  DisplayToWri    1    3[BANK0 ] unsigned char 
+  1375 ;; Auto vars:     Size  Location     Type
+  1376 ;;  Value           1    4[BANK0 ] unsigned char 
+  1377 ;; Return value:  Size  Location     Type
+  1378 ;;		None               void
+  1379 ;; Registers used:
+  1380 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1381 ;; Tracked objects:
+  1382 ;;		On entry : 0/0
+  1383 ;;		On exit  : 0/0
+  1384 ;;		Unchanged: 0/0
+  1385 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1386 ;;      Params:         0       1       0       0
+  1387 ;;      Locals:         0       1       0       0
+  1388 ;;      Temps:          0       0       0       0
+  1389 ;;      Totals:         0       2       0       0
+  1390 ;;Total ram usage:        2 bytes
+  1391 ;; Hardware stack levels used:    1
+  1392 ;; Hardware stack levels required when called:    3
+  1393 ;; This function calls:
+  1394 ;;		_ConvertValue
+  1395 ;; This function is called by:
+  1396 ;;		_Task1
+  1397 ;; This function uses a non-reentrant model
+  1398 ;;
+  1399                           
+  1400                           
+  1401                           ;psect for function _WriteDisplay
+  1402  024A                     _WriteDisplay:	
+  1403                           
+  1404                           ;incstack = 0
+  1405                           ; Regs used in _WriteDisplay: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1406                           ;WriteDisplay@Value stored from wreg
+  1407  024A  1283               	bcf	3,5	;RP0=0, select bank0
+  1408  024B  1303               	bcf	3,6	;RP1=0, select bank0
+  1409  024C  00C0               	movwf	WriteDisplay@Value
+  1410                           
+  1411                           ;Display7Segs.c: 31: switch(DisplayToWrite)
+  1412  024D  2A60               	goto	l830
+  1413  024E                     l153:	
+  1414                           ;Display7Segs.c: 32: {
+  1415                           ;Display7Segs.c: 33: case 0:
+  1416                           
+  1417                           
+  1418                           ;Display7Segs.c: 34: {
+  1419                           ;Display7Segs.c: 35: RB4 = 1;
+  1420  024E  1606               	bsf	6,4	;volatile
+  1421                           
+  1422                           ;Display7Segs.c: 36: RB5 = 0;
+  1423  024F  1286               	bcf	6,5	;volatile
+  1424                           
+  1425                           ;Display7Segs.c: 37: RB6 = 0;
+  1426  0250  1306               	bcf	6,6	;volatile
+  1427                           
+  1428                           ;Display7Segs.c: 38: ConvertValue(Value);
+  1429  0251  0840               	movf	WriteDisplay@Value,w
+  1430  0252  210A               	fcall	_ConvertValue
+  1431                           
+  1432                           ;Display7Segs.c: 39: break;
+  1433  0253  0008               	return
+  1434  0254                     l155:	
+  1435                           ;Display7Segs.c: 40: }
+  1436                           ;Display7Segs.c: 42: case 1:
+  1437                           
+  1438                           
+  1439                           ;Display7Segs.c: 43: {
+  1440                           ;Display7Segs.c: 44: RB4 = 0;
+  1441  0254  1206               	bcf	6,4	;volatile
+  1442                           
+  1443                           ;Display7Segs.c: 45: RB5 = 1;
+  1444  0255  1686               	bsf	6,5	;volatile
+  1445                           
+  1446                           ;Display7Segs.c: 46: RB6 = 0;
+  1447  0256  1306               	bcf	6,6	;volatile
+  1448                           
+  1449                           ;Display7Segs.c: 47: ConvertValue(Value);
+  1450  0257  0840               	movf	WriteDisplay@Value,w
+  1451  0258  210A               	fcall	_ConvertValue
+  1452                           
+  1453                           ;Display7Segs.c: 48: break;
+  1454  0259  0008               	return
+  1455  025A                     l156:	
+  1456                           ;Display7Segs.c: 49: }
+  1457                           ;Display7Segs.c: 51: case 2:
+  1458                           
+  1459                           
+  1460                           ;Display7Segs.c: 52: {
+  1461                           ;Display7Segs.c: 53: RB4 = 0;
+  1462  025A  1206               	bcf	6,4	;volatile
+  1463                           
+  1464                           ;Display7Segs.c: 54: RB5 = 0;
+  1465  025B  1286               	bcf	6,5	;volatile
+  1466                           
+  1467                           ;Display7Segs.c: 55: RB6 = 1;
+  1468  025C  1706               	bsf	6,6	;volatile
+  1469                           
+  1470                           ;Display7Segs.c: 56: ConvertValue(Value);
+  1471  025D  0840               	movf	WriteDisplay@Value,w
+  1472  025E  210A               	fcall	_ConvertValue
+  1473                           
+  1474                           ;Display7Segs.c: 58: }
+  1475                           ;Display7Segs.c: 59: }
+  1476                           
+  1477                           ;Display7Segs.c: 57: break;
+  1478  025F  0008               	return
+  1479  0260                     l830:	
+  1480  0260  1283               	bcf	3,5	;RP0=0, select bank0
+  1481  0261  1303               	bcf	3,6	;RP1=0, select bank0
+  1482  0262  083F               	movf	WriteDisplay@DisplayToWrite,w
+  1483                           
+  1484                           ; Switch size 1, requested type "space"
+  1485                           ; Number of cases is 3, Range of values is 0 to 2
+  1486                           ; switch strategies available:
+  1487                           ; Name         Instructions Cycles
+  1488                           ; direct_byte            9     6 (fixed)
+  1489                           ; simple_byte           10     6 (average)
+  1490                           ; jumptable            260     6 (fixed)
+  1491                           ;	Chosen strategy is direct_byte
+  1492  0263  0084               	movwf	4
+  1493  0264  3003               	movlw	3
+  1494  0265  0204               	subwf	4,w
+  1495  0266  1803               	skipnc
+  1496  0267  0008               	return
+  1497  0268  3000               	movlw	high S1012
+  1498  0269  008A               	movwf	10
+  1499  026A  304A               	movlw	low S1012
+  1500  026B  0704               	addwf	4,w
+  1501  026C  0082               	movwf	2
+  1502  026D  0008               	return
+  1503  026E                     __end_of_WriteDisplay:	
+  1504                           
+  1505                           	psect	swtext1
+  1506  004A                     __pswtext1:	
+  1507  004A                     S1012:	
+  1508  004A  2A4E               	ljmp	l153
+  1509  004B  2A54               	ljmp	l155
+  1510  004C  2A5A               	ljmp	l156
+  1511                           
+  1512                           	psect	text13
+  1513  010A                     __ptext13:	
+  1514 ;; *************** function _ConvertValue *****************
+  1515 ;; Defined at:
+  1516 ;;		line 65 in file "Display7Segs.c"
+  1517 ;; Parameters:    Size  Location     Type
+  1518 ;;  Value           1    wreg     unsigned char 
+  1519 ;; Auto vars:     Size  Location     Type
+  1520 ;;  Value           1    2[BANK0 ] unsigned char 
+  1521 ;; Return value:  Size  Location     Type
+  1522 ;;		None               void
+  1523 ;; Registers used:
+  1524 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath
+  1525 ;; Tracked objects:
+  1526 ;;		On entry : 0/0
+  1527 ;;		On exit  : 0/0
+  1528 ;;		Unchanged: 0/0
+  1529 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1530 ;;      Params:         0       0       0       0
+  1531 ;;      Locals:         0       1       0       0
+  1532 ;;      Temps:          0       2       0       0
+  1533 ;;      Totals:         0       3       0       0
+  1534 ;;Total ram usage:        3 bytes
+  1535 ;; Hardware stack levels used:    2
+  1536 ;; Hardware stack levels required when called:    1
+  1537 ;; This function calls:
+  1538 ;;		Nothing
+  1539 ;; This function is called by:
+  1540 ;;		_WriteDisplay
+  1541 ;; This function uses a non-reentrant model
+  1542 ;;
+  1543                           
+  1544                           
+  1545                           ;psect for function _ConvertValue
+  1546  010A                     _ConvertValue:	
+  1547                           
+  1548                           ;incstack = 0
+  1549                           ; Regs used in _ConvertValue: [wreg-fsr0h+status,2+status,0+pclath]
+  1550                           ;ConvertValue@Value stored from wreg
+  1551  010A  1283               	bcf	3,5	;RP0=0, select bank0
+  1552  010B  1303               	bcf	3,6	;RP1=0, select bank0
+  1553  010C  00BE               	movwf	ConvertValue@Value
+  1554                           
+  1555                           ;Display7Segs.c: 67: if (Value > 9)
+  1556  010D  300A               	movlw	10
+  1557  010E  023E               	subwf	ConvertValue@Value,w
+  1558  010F  1803               	btfsc	3,0
+  1559  0110  0008               	return
+  1560                           
+  1561                           ;Display7Segs.c: 70: RB0 = NumerosBCD[Value][0];
+  1562                           
+  1563                           ;Display7Segs.c: 68: return;
+  1564  0111  083E               	movf	ConvertValue@Value,w
+  1565  0112  00BC               	movwf	??_ConvertValue
+  1566  0113  3001               	movlw	1
+  1567  0114                     u335:	
+  1568  0114  1003               	clrc
+  1569  0115  0DBC               	rlf	??_ConvertValue,f
+  1570  0116  3EFF               	addlw	-1
+  1571  0117  1D03               	skipz
+  1572  0118  2914               	goto	u335
+  1573  0119  1003               	clrc
+  1574  011A  0D3C               	rlf	??_ConvertValue,w
+  1575  011B  3E01               	addlw	low ((_NumerosBCD-__stringbase)| (0+32768))
+  1576  011C  0084               	movwf	4
+  1577  011D  201C               	fcall	stringdir
+  1578  011E  00BD               	movwf	??_ConvertValue+1
+  1579  011F  0C3D               	rrf	??_ConvertValue+1,w
+  1580  0120  1C03               	btfss	3,0
+  1581  0121  2926               	goto	u340
+  1582  0122  1283               	bcf	3,5	;RP0=0, select bank0
+  1583  0123  1303               	bcf	3,6	;RP1=0, select bank0
+  1584  0124  1406               	bsf	6,0	;volatile
+  1585  0125  2929               	goto	u354
+  1586  0126                     u340:	
+  1587  0126  1283               	bcf	3,5	;RP0=0, select bank0
+  1588  0127  1303               	bcf	3,6	;RP1=0, select bank0
+  1589  0128  1006               	bcf	6,0	;volatile
+  1590  0129                     u354:	
+  1591                           
+  1592                           ;Display7Segs.c: 71: RB1 = NumerosBCD[Value][1];
+  1593  0129  083E               	movf	ConvertValue@Value,w
+  1594  012A  00BC               	movwf	??_ConvertValue
+  1595  012B  3001               	movlw	1
+  1596  012C                     u365:	
+  1597  012C  1003               	clrc
+  1598  012D  0DBC               	rlf	??_ConvertValue,f
+  1599  012E  3EFF               	addlw	-1
+  1600  012F  1D03               	skipz
+  1601  0130  292C               	goto	u365
+  1602  0131  1003               	clrc
+  1603  0132  0D3C               	rlf	??_ConvertValue,w
+  1604  0133  3E01               	addlw	1
+  1605  0134  3E01               	addlw	low ((_NumerosBCD-__stringbase)| (0+32768))
+  1606  0135  0084               	movwf	4
+  1607  0136  201C               	fcall	stringdir
+  1608  0137  00BD               	movwf	??_ConvertValue+1
+  1609  0138  0C3D               	rrf	??_ConvertValue+1,w
+  1610  0139  1C03               	btfss	3,0
+  1611  013A  293F               	goto	u370
+  1612  013B  1283               	bcf	3,5	;RP0=0, select bank0
+  1613  013C  1303               	bcf	3,6	;RP1=0, select bank0
+  1614  013D  1486               	bsf	6,1	;volatile
+  1615  013E  2942               	goto	u384
+  1616  013F                     u370:	
+  1617  013F  1283               	bcf	3,5	;RP0=0, select bank0
+  1618  0140  1303               	bcf	3,6	;RP1=0, select bank0
+  1619  0141  1086               	bcf	6,1	;volatile
+  1620  0142                     u384:	
+  1621                           
+  1622                           ;Display7Segs.c: 72: RB2 = NumerosBCD[Value][2];
+  1623  0142  083E               	movf	ConvertValue@Value,w
+  1624  0143  00BC               	movwf	??_ConvertValue
+  1625  0144  3001               	movlw	1
+  1626  0145                     u395:	
+  1627  0145  1003               	clrc
+  1628  0146  0DBC               	rlf	??_ConvertValue,f
+  1629  0147  3EFF               	addlw	-1
+  1630  0148  1D03               	skipz
+  1631  0149  2945               	goto	u395
+  1632  014A  1003               	clrc
+  1633  014B  0D3C               	rlf	??_ConvertValue,w
+  1634  014C  3E02               	addlw	2
+  1635  014D  3E01               	addlw	low ((_NumerosBCD-__stringbase)| (0+32768))
+  1636  014E  0084               	movwf	4
+  1637  014F  201C               	fcall	stringdir
+  1638  0150  00BD               	movwf	??_ConvertValue+1
+  1639  0151  0C3D               	rrf	??_ConvertValue+1,w
+  1640  0152  1C03               	btfss	3,0
+  1641  0153  2958               	goto	u400
+  1642  0154  1283               	bcf	3,5	;RP0=0, select bank0
+  1643  0155  1303               	bcf	3,6	;RP1=0, select bank0
+  1644  0156  1506               	bsf	6,2	;volatile
+  1645  0157  295B               	goto	u414
+  1646  0158                     u400:	
+  1647  0158  1283               	bcf	3,5	;RP0=0, select bank0
+  1648  0159  1303               	bcf	3,6	;RP1=0, select bank0
+  1649  015A  1106               	bcf	6,2	;volatile
+  1650  015B                     u414:	
+  1651                           
+  1652                           ;Display7Segs.c: 73: RB3 = NumerosBCD[Value][3];
+  1653  015B  083E               	movf	ConvertValue@Value,w
+  1654  015C  00BC               	movwf	??_ConvertValue
+  1655  015D  3001               	movlw	1
+  1656  015E                     u425:	
+  1657  015E  1003               	clrc
+  1658  015F  0DBC               	rlf	??_ConvertValue,f
+  1659  0160  3EFF               	addlw	-1
+  1660  0161  1D03               	skipz
+  1661  0162  295E               	goto	u425
+  1662  0163  1003               	clrc
+  1663  0164  0D3C               	rlf	??_ConvertValue,w
+  1664  0165  3E03               	addlw	3
+  1665  0166  3E01               	addlw	low ((_NumerosBCD-__stringbase)| (0+32768))
+  1666  0167  0084               	movwf	4
+  1667  0168  201C               	fcall	stringdir
+  1668  0169  00BD               	movwf	??_ConvertValue+1
+  1669  016A  0C3D               	rrf	??_ConvertValue+1,w
+  1670  016B  1C03               	btfss	3,0
+  1671  016C  2971               	goto	u430
+  1672  016D  1283               	bcf	3,5	;RP0=0, select bank0
+  1673  016E  1303               	bcf	3,6	;RP1=0, select bank0
+  1674  016F  1586               	bsf	6,3	;volatile
+  1675  0170  0008               	return
+  1676  0171                     u430:	
+  1677  0171  1283               	bcf	3,5	;RP0=0, select bank0
+  1678  0172  1303               	bcf	3,6	;RP1=0, select bank0
+  1679  0173  1186               	bcf	6,3	;volatile
+  1680  0174  0008               	return
+  1681  0175                     __end_of_ConvertValue:	
+  1682                           
+  1683                           	psect	text14
+  1684  02D2                     __ptext14:	
+  1685 ;; *************** function _ConfigTimer0 *****************
+  1686 ;; Defined at:
+  1687 ;;		line 78 in file "MainTaskMng.c"
+  1688 ;; Parameters:    Size  Location     Type
+  1689 ;;		None
+  1690 ;; Auto vars:     Size  Location     Type
+  1691 ;;		None
+  1692 ;; Return value:  Size  Location     Type
+  1693 ;;		None               void
+  1694 ;; Registers used:
+  1695 ;;		wreg, status,2, status,0
+  1696 ;; Tracked objects:
+  1697 ;;		On entry : 0/0
+  1698 ;;		On exit  : 0/0
+  1699 ;;		Unchanged: 0/0
+  1700 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1701 ;;      Params:         0       0       0       0
+  1702 ;;      Locals:         0       0       0       0
+  1703 ;;      Temps:          0       0       0       0
+  1704 ;;      Totals:         0       0       0       0
+  1705 ;;Total ram usage:        0 bytes
+  1706 ;; Hardware stack levels used:    1
+  1707 ;; Hardware stack levels required when called:    1
+  1708 ;; This function calls:
+  1709 ;;		Nothing
+  1710 ;; This function is called by:
+  1711 ;;		_main
+  1712 ;; This function uses a non-reentrant model
+  1713 ;;
+  1714                           
+  1715                           
+  1716                           ;psect for function _ConfigTimer0
+  1717  02D2                     _ConfigTimer0:	
+  1718                           
+  1719                           ;MainTaskMng.c: 93: OPTION_REGbits.PS = 0b010;
+  1720                           
+  1721                           ;incstack = 0
+  1722                           ; Regs used in _ConfigTimer0: [wreg+status,2+status,0]
+  1723  02D2  1683               	bsf	3,5	;RP0=1, select bank1
+  1724  02D3  1303               	bcf	3,6	;RP1=0, select bank1
+  1725  02D4  0801               	movf	1,w	;volatile
+  1726  02D5  39F8               	andlw	-8
+  1727  02D6  3802               	iorlw	2
+  1728  02D7  0081               	movwf	1	;volatile
+  1729                           
+  1730                           ;MainTaskMng.c: 94: OPTION_REGbits.PSA = 0;
+  1731  02D8  1181               	bcf	1,3	;volatile
+  1732                           
+  1733                           ;MainTaskMng.c: 95: OPTION_REGbits.T0CS=0;
+  1734  02D9  1281               	bcf	1,5	;volatile
+  1735                           
+  1736                           ;MainTaskMng.c: 96: INTCONbits.TMR0IE =1;
+  1737  02DA  168B               	bsf	11,5	;volatile
+  1738                           
+  1739                           ;MainTaskMng.c: 97: INTCONbits.GIE=1;
+  1740  02DB  178B               	bsf	11,7	;volatile
+  1741                           
+  1742                           ;MainTaskMng.c: 98: TMR0 = 131;
+  1743  02DC  3083               	movlw	131
+  1744  02DD  1283               	bcf	3,5	;RP0=0, select bank0
+  1745  02DE  1303               	bcf	3,6	;RP1=0, select bank0
+  1746  02DF  0081               	movwf	1	;volatile
+  1747                           
+  1748                           ;MainTaskMng.c: 99: Timer0IntGeneraed = 0;
+  1749  02E0  01BB               	clrf	_Timer0IntGeneraed
+  1750  02E1  0008               	return
+  1751  02E2                     __end_of_ConfigTimer0:	
+  1752                           
+  1753                           	psect	text15
+  1754  0175                     __ptext15:	
+  1755 ;; *************** function _isr *****************
+  1756 ;; Defined at:
+  1757 ;;		line 193 in file "MainTaskMng.c"
+  1758 ;; Parameters:    Size  Location     Type
+  1759 ;;		None
+  1760 ;; Auto vars:     Size  Location     Type
+  1761 ;;  i               1    7[COMMON] unsigned char 
+  1762 ;; Return value:  Size  Location     Type
+  1763 ;;		None               void
+  1764 ;; Registers used:
+  1765 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1
+  1766 ;; Tracked objects:
+  1767 ;;		On entry : 0/0
+  1768 ;;		On exit  : 0/0
+  1769 ;;		Unchanged: 0/0
+  1770 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1771 ;;      Params:         0       0       0       0
+  1772 ;;      Locals:         1       0       0       0
+  1773 ;;      Temps:          7       0       0       0
+  1774 ;;      Totals:         8       0       0       0
+  1775 ;;Total ram usage:        8 bytes
+  1776 ;; Hardware stack levels used:    1
+  1777 ;; This function calls:
+  1778 ;;		Nothing
+  1779 ;; This function is called by:
+  1780 ;;		Interrupt level 1
+  1781 ;; This function uses a non-reentrant model
+  1782 ;;
+  1783                           
+  1784                           
+  1785                           ;psect for function _isr
+  1786  0175                     _isr:	
+  1787                           
+  1788                           ;MainTaskMng.c: 195: char i;
+  1789                           ;MainTaskMng.c: 198: if (TMR0IF && T0IF)
+  1790  0175  190B               	btfsc	11,2	;volatile
+  1791  0176  1D0B               	btfss	11,2	;volatile
+  1792  0177  29C5               	goto	i1l98
+  1793                           
+  1794                           ;MainTaskMng.c: 199: {
+  1795                           ;MainTaskMng.c: 200: Timer0IntGeneraed = 1;
+  1796  0178  01BB               	clrf	_Timer0IntGeneraed
+  1797  0179  0ABB               	incf	_Timer0IntGeneraed,f
+  1798                           
+  1799                           ;MainTaskMng.c: 203: for (i=0; i<4; i++)
+  1800  017A  01F7               	clrf	isr@i
+  1801  017B  3004               	movlw	4
+  1802  017C  0277               	subwf	isr@i,w
+  1803  017D  1803               	btfsc	3,0
+  1804  017E  29AE               	goto	i1l950
+  1805  017F                     i1l942:	
+  1806                           
+  1807                           ;MainTaskMng.c: 204: {
+  1808                           ;MainTaskMng.c: 205: if (RecentTasksTimeToExecute[i] > 0)
+  1809  017F  0877               	movf	isr@i,w
+  1810  0180  00F0               	movwf	??_isr
+  1811  0181  0770               	addwf	??_isr,w
+  1812  0182  3E20               	addlw	(low (_RecentTasksTimeToExecute| 0))& (0+255)
+  1813  0183  0084               	movwf	4
+  1814  0184  1383               	bcf	3,7	;select IRP bank0
+  1815  0185  0800               	movf	0,w
+  1816  0186  00F1               	movwf	??_isr+1
+  1817  0187  0A84               	incf	4,f
+  1818  0188  0800               	movf	0,w
+  1819  0189  00F2               	movwf	??_isr+2
+  1820  018A  0872               	movf	??_isr+2,w
+  1821  018B  3A80               	xorlw	128
+  1822  018C  00FF               	movwf	127
+  1823  018D  3080               	movlw	128
+  1824  018E  027F               	subwf	127,w
+  1825  018F  1D03               	skipz
+  1826  0190  2993               	goto	u58_25
+  1827  0191  3001               	movlw	1
+  1828  0192  0271               	subwf	??_isr+1,w
+  1829  0193                     u58_25:	
+  1830  0193  1C03               	skipc
+  1831  0194  29A6               	goto	i1l946
+  1832                           
+  1833                           ;MainTaskMng.c: 206: RecentTasksTimeToExecute[i]--;
+  1834  0195  0877               	movf	isr@i,w
+  1835  0196  00F0               	movwf	??_isr
+  1836  0197  0770               	addwf	??_isr,w
+  1837  0198  3E20               	addlw	(low (_RecentTasksTimeToExecute| 0))& (0+255)
+  1838  0199  0084               	movwf	4
+  1839  019A  30FF               	movlw	255
+  1840  019B  1383               	bcf	3,7	;select IRP bank0
+  1841  019C  0780               	addwf	0,f
+  1842  019D  0F84               	incfsz	4,f
+  1843  019E  0800               	movf	0,w
+  1844  019F  1803               	skipnc
+  1845  01A0  0A00               	incf	0,w
+  1846  01A1  00FF               	movwf	127
+  1847  01A2  30FF               	movlw	255
+  1848  01A3  077F               	addwf	127,w
+  1849  01A4  0080               	movwf	0
+  1850  01A5  0384               	decf	4,f
+  1851  01A6                     i1l946:	
+  1852  01A6  3001               	movlw	1
+  1853  01A7  00F0               	movwf	??_isr
+  1854  01A8  0870               	movf	??_isr,w
+  1855  01A9  07F7               	addwf	isr@i,f
+  1856  01AA  3004               	movlw	4
+  1857  01AB  0277               	subwf	isr@i,w
+  1858  01AC  1C03               	skipc
+  1859  01AD  297F               	goto	i1l942
+  1860  01AE                     i1l950:	
+  1861                           
+  1862                           ;MainTaskMng.c: 207: }
+  1863                           ;MainTaskMng.c: 209: if (TaskIsExecuting == 1)
+  1864  01AE  037B               	decf	_TaskIsExecuting,w	;volatile
+  1865  01AF  1D03               	btfss	3,2
+  1866  01B0  29BF               	goto	i1l958
+  1867                           
+  1868                           ;MainTaskMng.c: 210: {
+  1869                           ;MainTaskMng.c: 211: TaskTimeout--;
+  1870  01B1  30FF               	movlw	255
+  1871  01B2  07F8               	addwf	_TaskTimeout,f
+  1872  01B3  1803               	skipnc
+  1873  01B4  0AF9               	incf	_TaskTimeout+1,f
+  1874  01B5  30FF               	movlw	255
+  1875  01B6  07F9               	addwf	_TaskTimeout+1,f
+  1876                           
+  1877                           ;MainTaskMng.c: 213: if (!TaskTimeout)
+  1878  01B7  0878               	movf	_TaskTimeout,w
+  1879  01B8  0479               	iorwf	_TaskTimeout+1,w
+  1880  01B9  1D03               	btfss	3,2
+  1881  01BA  29BF               	goto	i1l958
+  1882                           
+  1883                           ;MainTaskMng.c: 214: {
+  1884                           ;MainTaskMng.c: 216: PCLATH=0;
+  1885  01BB  1283               	bcf	3,5	;RP0=0, select bank0
+  1886  01BC  1303               	bcf	3,6	;RP1=0, select bank0
+  1887  01BD  018A               	clrf	10	;volatile
+  1888                           
+  1889                           ;MainTaskMng.c: 217: PCL=0;
+  1890  01BE  0182               	clrf	2	;volatile
+  1891  01BF                     i1l958:	
+  1892                           
+  1893                           ;MainTaskMng.c: 218: }
+  1894                           ;MainTaskMng.c: 219: }
+  1895                           ;MainTaskMng.c: 221: T0IF = 0;
+  1896  01BF  110B               	bcf	11,2	;volatile
+  1897                           
+  1898                           ;MainTaskMng.c: 222: INTCONbits.TMR0IF = 0;
+  1899  01C0  110B               	bcf	11,2	;volatile
+  1900                           
+  1901                           ;MainTaskMng.c: 223: TMR0 = 131;
+  1902  01C1  3083               	movlw	131
+  1903  01C2  1283               	bcf	3,5	;RP0=0, select bank0
+  1904  01C3  1303               	bcf	3,6	;RP1=0, select bank0
+  1905  01C4  0081               	movwf	1	;volatile
+  1906  01C5                     i1l98:	
+  1907  01C5  0876               	movf	??_isr+6,w
+  1908  01C6  00FF               	movwf	127
+  1909  01C7  0875               	movf	??_isr+5,w
+  1910  01C8  008A               	movwf	10
+  1911  01C9  0874               	movf	??_isr+4,w
+  1912  01CA  0084               	movwf	4
+  1913  01CB  0E73               	swapf	(??_isr+3)^(0+-128),w
+  1914  01CC  0083               	movwf	3
+  1915  01CD  0EFE               	swapf	126,f
+  1916  01CE  0E7E               	swapf	126,w
+  1917  01CF  0009               	retfie
+  1918  01D0                     __end_of_isr:	
+  1919  0008                     
+  1920                           	psect	intentry
+  1921  0004                     __pintentry:	
+  1922                           ;incstack = 0
+  1923                           ; Regs used in _isr: [wreg-fsr0h+status,2+status,0+btemp+1]
+  1924                           
+  1925  0004                     interrupt_function:	
+  1926  007E                     saved_w	set	btemp
+  1927  0004  00FE               	movwf	btemp
+  1928  0005  0E03               	swapf	3,w
+  1929  0006  00F3               	movwf	??_isr+3
+  1930  0007  0804               	movf	4,w
+  1931  0008  00F4               	movwf	??_isr+4
+  1932  0009  080A               	movf	10,w
+  1933  000A  00F5               	movwf	??_isr+5
+  1934  000B  1283               	bcf	3,5	;RP0=0, select bank0
+  1935  000C  1303               	bcf	3,6	;RP1=0, select bank0
+  1936  000D  087F               	movf	btemp+1,w
+  1937  000E  00F6               	movwf	??_isr+6
+  1938  000F  2975               	ljmp	_isr
+  1939                           
+  1940                           	psect	functab
+  1941  0100                     __pfunctab:	
+  1942  0100                     __fptable:	
+  1943  0100                     fptable:	
+  1944  0100  00FF               	movwf	(btemp+1)& (0+127)
+  1945  0101  3001               	movlw	high fptable
+  1946  0102  008A               	movwf	10
+  1947  0103  087F               	movf	(btemp+1)& (0+127),w
+  1948  0104  0782               	addwf	2,f
+  1949  0105                     fpbase:	
+  1950  0105  2905               	goto	fpbase	; Call via a null pointer and you will get stuck here.
+  1951  0106                     fp__Task4:	
+  1952  0106  2AF0               	ljmp	_Task4
+  1953  0107                     fp__Task1:	
+  1954  0107  2AAA               	ljmp	_Task1
+  1955  0108                     fp__Task2:	
+  1956  0108  2B15               	ljmp	_Task2
+  1957  0109                     fp__Task3:	
+  1958  0109  2AE2               	ljmp	_Task3
+  1959  010A                     __end_of__fptable:	
+  1960  007E                     btemp	set	126	;btemp
+  1961  007E                     wtemp	set	126
+  1962  007E                     wtemp0	set	126
+  1963  0080                     wtemp1	set	128
+  1964  0082                     wtemp2	set	130
+  1965  0084                     wtemp3	set	132
+  1966  0086                     wtemp4	set	134
+  1967  0088                     wtemp5	set	136
+  1968  007F                     wtemp6	set	127
+  1969  007E                     ttemp	set	126
+  1970  007E                     ttemp0	set	126
+  1971  0081                     ttemp1	set	129
+  1972  0084                     ttemp2	set	132
+  1973  0087                     ttemp3	set	135
+  1974  007F                     ttemp4	set	127
+  1975  007E                     ltemp	set	126
+  1976  007E                     ltemp0	set	126
+  1977  0082                     ltemp1	set	130
+  1978  0086                     ltemp2	set	134
+  1979  0080                     ltemp3	set	128
+
+
+Data Sizes:
+    Strings     0
+    Constant    40
+    Data        0
+    BSS         32
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      8      12
+    BANK0            80     11      39
+    BANK1            80      0       0
+    BANK2            48      0       0
+
+Pointer List with Targets:
+
+    ScheduledTasks	PTR FTN()void [4] size(1) Largest target is 0
+		 -> Task4(), Task3(), Task2(), Task1(), 
+
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _isr in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    _main->_ExecuteTask
+    _ExecuteTask->_Task1
+    _ExecuteTask->_Task3
+    _Task4->_EnableOrDisableTimeCounter
+    _Task3->_SetValuesDisplays
+    _Task1->_WriteDisplay
+    _WriteDisplay->_ConvertValue
+
+Critical Paths under _isr in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _isr in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _isr in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0     985
+                       _ConfigTimer0
+                        _ExecuteTask
+                          _InitTasks
+                    _InitTimeCounter
+                  _SetValuesDisplays
+ ---------------------------------------------------------------------------------
+ (1) _InitTasks                                            1     1      0       0
+                                              0 BANK0      1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _ExecuteTask                                          5     5      0     707
+                                              6 BANK0      5     5      0
+                              _Task1 *
+                              _Task2 *
+                              _Task3 *
+                              _Task4 *
+ ---------------------------------------------------------------------------------
+ (2) _Task4                                                0     0      0      22
+         _EnableOrDisableTimeCounter
+ ---------------------------------------------------------------------------------
+ (3) _EnableOrDisableTimeCounter                           2     2      0      22
+                                              0 BANK0      2     2      0
+ ---------------------------------------------------------------------------------
+ (2) _Task3                                                2     2      0     278
+                                              4 BANK0      2     2      0
+                 _RefreshTimeCounter
+                  _SetValuesDisplays
+ ---------------------------------------------------------------------------------
+ (1) _SetValuesDisplays                                    4     2      2     278
+                                              0 BANK0      4     2      2
+ ---------------------------------------------------------------------------------
+ (3) _RefreshTimeCounter                                   1     1      0       0
+                                              0 BANK0      1     1      0
+                    _InitTimeCounter
+ ---------------------------------------------------------------------------------
+ (1) _InitTimeCounter                                      0     0      0       0
+ ---------------------------------------------------------------------------------
+ (2) _Task2                                                0     0      0       0
+              _RefreshBreathingLight
+ ---------------------------------------------------------------------------------
+ (3) _RefreshBreathingLight                                0     0      0       0
+ ---------------------------------------------------------------------------------
+ (2) _Task1                                                1     1      0     251
+                                              5 BANK0      1     1      0
+                       _WriteDisplay
+ ---------------------------------------------------------------------------------
+ (3) _WriteDisplay                                         2     1      1     251
+                                              3 BANK0      2     1      1
+                       _ConvertValue
+ ---------------------------------------------------------------------------------
+ (5) _ConvertValue                                         3     3      0     110
+                                              0 BANK0      3     3      0
+ ---------------------------------------------------------------------------------
+ (1) _ConfigTimer0                                         0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 5
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (6) _isr                                                  8     8      0      90
+                                              0 COMMON     8     8      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 6
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _ConfigTimer0
+   _ExecuteTask
+     _Task1 *
+       _WriteDisplay
+         _ConvertValue
+     _Task2 *
+       _RefreshBreathingLight
+     _Task3 *
+       _RefreshTimeCounter
+         _InitTimeCounter
+       _SetValuesDisplays
+     _Task4 *
+       _EnableOrDisableTimeCounter
+   _InitTasks
+   _InitTimeCounter
+   _SetValuesDisplays
+
+ _isr (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA              80      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      8       C       1       85.7%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               50      B      27       3       48.8%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+ABS                  0      0      33       4        0.0%
+BITBANK0            50      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+SFR2                 0      0       0       5        0.0%
+BITBANK1            50      0       0       6        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK2            30      0       0       8        0.0%
+BANK2               30      0       0       9        0.0%
+DATA                 0      0      33      10        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.34 build -361300703 
+Symbol Table                                                                                   Mon Jan 25 23:41:31 2016
+
+                                  pc 0002                          __CFG_CP$OFF 0000  
+                                 fsr 0004                                  l153 024E  
+                                l155 0254                                  l156 025A  
+                                l830 0260                                  l852 0280  
+                                l926 0211                                  l858 0289  
+                                l888 02F7                                  l976 02A2  
+                                _RA0 0028                                  _RB0 0030  
+                                _RB1 0031                                  _RB2 0032  
+                                _RB3 0033                                  _RB4 0034  
+                                _RB5 0035                                  _RB6 0036  
+                                _RB7 0037                                  u400 0158  
+                                _PCL 0002                                  u340 0126  
+                                u430 0171                                  u414 015B  
+                                u335 0114                                  u425 015E  
+                                u370 013F                                  u354 0129  
+                       __CFG_CPD$OFF 0000                                  u365 012C  
+                                u384 0142                                  u395 0145  
+                                _isr 0175                                  fsr0 0004  
+                                indf 0000              ??_RefreshBreathingLight 003C  
+                       __CFG_FOSC$XT 0000                                 S1012 004A  
+              __size_of_WriteDisplay 0024                         __CFG_LVP$OFF 0000  
+                               ?_isr 0070                                 _T0IF 005A  
+                               i1l98 01C5                                 _TMR0 0001  
+                     ??_ConvertValue 003C                                 _main 028F  
+                               btemp 007E                                 isr@i 0077  
+                               ltemp 007E                   _RefreshTimeCounter 026E  
+                               start 0010                                 ttemp 007E  
+                               wtemp 007E                        ??_ExecuteTask 0042  
+                ?_RefreshTimeCounter 0070                                ??_isr 0070  
+                              ?_main 0070                        __CFG_WDTE$OFF 0000  
+                       _WriteDisplay 024A                                i1l950 01AE  
+                              i1l942 017F                                i1l946 01A6  
+                              i1l958 01BF                                _PORTB 0006  
+                              _TRISA 0085                                _TRISB 0086  
+                              u58_25 0193                    ??_InitTimeCounter 003C  
+                              _Task1 02AA                                _Task2 0315  
+                              _Task3 02E2                                _Task4 02F0  
+               ??_RefreshTimeCounter 003C                                fpbase 0105  
+                     __CFG_BOREN$OFF 0000                                pclath 000A  
+                              ltemp0 007E                                ltemp1 0082  
+                              ltemp2 0086                                ltemp3 0080  
+                              ttemp0 007E                                ttemp1 0081  
+                              ttemp2 0084                                ttemp3 0087  
+                              ttemp4 007F                                status 0003  
+                              wtemp0 007E                                wtemp1 0080  
+                              wtemp2 0082                                wtemp3 0084  
+                              wtemp4 0086                                wtemp5 0088  
+                              wtemp6 007F                       __CFG_MCLRE$OFF 0000  
+                    __initialization 0011                 __end_of_ConfigTimer0 02E2  
+                       __end_of_main 02AA                               ??_main 0047  
+                __end_of_ExecuteTask 0216          ?_EnableOrDisableTimeCounter 0070  
+                             ?_Task1 0070                               ?_Task2 0070  
+                             ?_Task3 0070                               ?_Task4 0070  
+                             _PCLATH 000A                               _TMR0IF 005A  
+                 __size_of_InitTasks 0034                     __end_of__fptable 010A  
+                     __CFG_PWRTE$OFF 0000                           _NumerosBCD 0022  
+               __end_of_ConvertValue 0175                               fptable 0100  
+                             fptotal 0008                         ExecuteTask@i 0046  
+                             saved_w 007E              __end_of__initialization 001A  
+                      _RecentDisplay 003A                       __pcstackCOMMON 0070  
+                      __end_of_Task1 02C1                        __end_of_Task2 0317  
+                      __end_of_Task3 02F0                        __end_of_Task4 02FA  
+                        _ExecuteTask 01D0                    __end_of_InitTasks 024A  
+                  _Timer0IntGeneraed 003B                       _OPTION_REGbits 0081  
+                            ??_Task1 0041                              ??_Task2 003C  
+                            ??_Task3 0040                              ??_Task4 003E  
+     __size_of_RefreshBreathingLight 0005        __end_of_RefreshBreathingLight 0315  
+                         __pbssBANK0 0020                __size_of_ConfigTimer0 0010  
+         WriteDisplay@DisplayToWrite 003F                           __pmaintext 028F  
+__size_of_EnableOrDisableTimeCounter 0008                      _InitTimeCounter 030A  
+                         __pintentry 0004                         _ConfigTimer0 02D2  
+                        _TaskTimeout 0078                           __stringtab 001C  
+                       _DisplayValue 0034                __size_of_ConvertValue 006B  
+                            __ptext1 0216                              __ptext2 01D0  
+                            __ptext3 02E2                              __ptext4 0315  
+                            __ptext5 02AA                              __ptext6 02F0  
+                            __ptext7 0302                              __ptext8 02C1  
+                            __ptext9 026E                         __size_of_isr 005B  
+                            clrloop0 02FB          __size_of_RefreshTimeCounter 0021  
+               end_of_initialization 001A                    _SetValuesDisplays 02C1  
+                       _ConvertValue 010A              __end_of_InitTimeCounter 0310  
+                 ?_SetValuesDisplays 003C                    ConvertValue@Value 003E  
+                ??_SetValuesDisplays 003E          SetValuesDisplays@FirstValue 003F  
+          __end_of_SetValuesDisplays 02D2                     _TimeCounterValue 0037  
+                       ?_ExecuteTask 0070                  start_initialization 0011  
+                          _InitTasks 0216                          __end_of_isr 01D0  
+                   ?_InitTimeCounter 0070          SetValuesDisplays@ThirdValue 003D  
+                      ?_WriteDisplay 003F                    _EnableTimeCounter 007A  
+  EnableOrDisableTimeCounter@YesOrNo 003D                          __pbssCOMMON 0078  
+                          ___latbits 0000                        __pcstackBANK0 003C  
+                         ?_InitTasks 0070                    __size_of__fptable 000A  
+         __size_of_SetValuesDisplays 0011                _RefreshBreathingLight 0310  
+                 __end_of_NumerosBCD 004A                            __pfunctab 0100  
+                     ??_WriteDisplay 0040                       _ScheduledTasks 0030  
+                          __pstrings 001C                            __pswtext1 004A  
+                     __size_of_Task1 0017                       __size_of_Task2 0002  
+                     __size_of_Task3 000E                       __size_of_Task4 000A  
+       ??_EnableOrDisableTimeCounter 003C                    interrupt_function 0004  
+       SetValuesDisplays@SecondValue 003C                            clear_ram0 02FA  
+                    _TaskIsExecuting 007B                 __size_of_ExecuteTask 0046  
+                        __stringbase 0021           __end_of_RefreshTimeCounter 028F  
+                        ??_InitTasks 003C               ?_RefreshBreathingLight 0070  
+                 _TimeScheduledTasks 0028                   __end_of__stringtab 0022  
+                           __fptable 0100             _RecentTasksTimeToExecute 0020  
+                           __ptext10 030A                             __ptext11 0310  
+                           __ptext12 024A                             __ptext13 010A  
+                           __ptext14 02D2                             __ptext15 0175  
+               __end_of_WriteDisplay 026E                        __size_of_main 001B  
+                           fp__Task1 0107                             fp__Task2 0108  
+                           fp__Task3 0109                             fp__Task4 0106  
+                         _INTCONbits 000B   __end_of_EnableOrDisableTimeCounter 030A  
+         _EnableOrDisableTimeCounter 0302                        ?_ConfigTimer0 0070  
+                  WriteDisplay@Value 0040                             intlevel1 0100  
+                          stringcode 001C             __size_of_InitTimeCounter 0006  
+                           stringdir 001C                             stringtab 001C  
+                     ??_ConfigTimer0 003C                        ?_ConvertValue 0070  

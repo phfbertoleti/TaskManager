@@ -1,0 +1,234 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F628A ]
+[d frameptr 6 ]
+"14 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\BreathingLight.c
+[v _RefreshBreathingLight RefreshBreathingLight `(v  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"29 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\Display7Segs.c
+[v _WriteDisplay WriteDisplay `(v  1 e 0 0 ]
+"65
+[v _ConvertValue ConvertValue `(v  1 e 0 0 ]
+"79
+[v _SetValuesDisplays SetValuesDisplays `(v  1 e 0 0 ]
+"78 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\MainTaskMng.c
+[v _ConfigTimer0 ConfigTimer0 `(v  1 e 0 0 ]
+"105
+[v _InitTasks InitTasks `(v  1 e 0 0 ]
+"132
+[v _ExecuteTask ExecuteTask `(v  1 e 0 0 ]
+"152
+[v _Task1 Task1 `(v  1 e 0 0 ]
+"165
+[v _Task2 Task2 `(v  1 e 0 0 ]
+"173
+[v _Task3 Task3 `(v  1 e 0 0 ]
+"182
+[v _Task4 Task4 `(v  1 e 0 0 ]
+"193
+[v _isr isr `II(v  1 e 0 0 ]
+"230
+[v _main main `(v  1 e 0 0 ]
+"15 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\TimeCounter.c
+[v _InitTimeCounter InitTimeCounter `(v  1 e 0 0 ]
+"25
+[v _RefreshTimeCounter RefreshTimeCounter `(v  1 e 0 0 ]
+"53
+[v _EnableOrDisableTimeCounter EnableOrDisableTimeCounter `(v  1 e 0 0 ]
+"55 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic16f628a.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"61
+[v _PCL PCL `VEuc  1 e 1 @2 ]
+"221
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"282
+[v _PCLATH PCLATH `VEuc  1 e 1 @10 ]
+[s S46 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"324
+[s S55 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S60 . 1 `S46 1 . 1 0 `S55 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES60  1 e 1 @11 ]
+[s S20 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"832
+[s S27 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S31 . 1 `S20 1 . 1 0 `S27 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES31  1 e 1 @129 ]
+"881
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"942
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1380
+[v _RA0 RA0 `VEb  1 e 0 @40 ]
+"1396
+[v _RB0 RB0 `VEb  1 e 0 @48 ]
+"1398
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"1400
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
+"1402
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
+"1404
+[v _RB4 RB4 `VEb  1 e 0 @52 ]
+"1406
+[v _RB5 RB5 `VEb  1 e 0 @53 ]
+"1408
+[v _RB6 RB6 `VEb  1 e 0 @54 ]
+"1410
+[v _RB7 RB7 `VEb  1 e 0 @55 ]
+"1440
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"1456
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"39 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\Display7Seg.h
+[v _RecentDisplay RecentDisplay `uc  1 e 1 0 ]
+"40
+[v _DisplayValue DisplayValue `[3]uc  1 e 3 0 ]
+"12 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\Display7Segs.c
+[v _NumerosBCD NumerosBCD `DCC[10][4]uc  1 e 40 0 ]
+"52 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\MainTaskMng.c
+[v _ScheduledTasks ScheduledTasks `[4]*.27(v  1 e 4 0 ]
+"53
+[v _TimeScheduledTasks TimeScheduledTasks `[4]i  1 e 8 0 ]
+"54
+[v _RecentTasksTimeToExecute RecentTasksTimeToExecute `[4]i  1 e 8 0 ]
+"55
+[v _Timer0IntGeneraed Timer0IntGeneraed `uc  1 e 1 0 ]
+"56
+[v _TaskIsExecuting TaskIsExecuting `VEuc  1 e 1 0 ]
+"57
+[v _TaskTimeout TaskTimeout `i  1 e 2 0 ]
+"27 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\TimeCounter.h
+[v _TimeCounterValue TimeCounterValue `[3]uc  1 e 3 0 ]
+"28
+[v _EnableTimeCounter EnableTimeCounter `uc  1 e 1 0 ]
+"230 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\MainTaskMng.c
+[v _main main `(v  1 e 0 0 ]
+{
+"257
+} 0
+"105
+[v _InitTasks InitTasks `(v  1 e 0 0 ]
+{
+"127
+} 0
+"132
+[v _ExecuteTask ExecuteTask `(v  1 e 0 0 ]
+{
+"134
+[v ExecuteTask@i i `uc  1 a 1 10 ]
+"147
+} 0
+"173
+[v _Task3 Task3 `(v  1 e 0 0 ]
+{
+"177
+} 0
+"165
+[v _Task2 Task2 `(v  1 e 0 0 ]
+{
+"168
+} 0
+"152
+[v _Task1 Task1 `(v  1 e 0 0 ]
+{
+"160
+} 0
+"182
+[v _Task4 Task4 `(v  1 e 0 0 ]
+{
+"188
+} 0
+"53 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\TimeCounter.c
+[v _EnableOrDisableTimeCounter EnableOrDisableTimeCounter `(v  1 e 0 0 ]
+{
+[v EnableOrDisableTimeCounter@YesOrNo YesOrNo `uc  1 a 1 wreg ]
+[v EnableOrDisableTimeCounter@YesOrNo YesOrNo `uc  1 a 1 wreg ]
+"55
+[v EnableOrDisableTimeCounter@YesOrNo YesOrNo `uc  1 a 1 1 ]
+"56
+} 0
+"79 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\Display7Segs.c
+[v _SetValuesDisplays SetValuesDisplays `(v  1 e 0 0 ]
+{
+[v SetValuesDisplays@FirstValue FirstValue `uc  1 a 1 wreg ]
+[v SetValuesDisplays@FirstValue FirstValue `uc  1 a 1 wreg ]
+[v SetValuesDisplays@SecondValue SecondValue `uc  1 p 1 0 ]
+[v SetValuesDisplays@ThirdValue ThirdValue `uc  1 p 1 1 ]
+"81
+[v SetValuesDisplays@FirstValue FirstValue `uc  1 a 1 3 ]
+"85
+} 0
+"25 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\TimeCounter.c
+[v _RefreshTimeCounter RefreshTimeCounter `(v  1 e 0 0 ]
+{
+"46
+} 0
+"15
+[v _InitTimeCounter InitTimeCounter `(v  1 e 0 0 ]
+{
+"20
+} 0
+"14 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\BreathingLight.c
+[v _RefreshBreathingLight RefreshBreathingLight `(v  1 e 0 0 ]
+{
+"17
+} 0
+"29 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\Display7Segs.c
+[v _WriteDisplay WriteDisplay `(v  1 e 0 0 ]
+{
+[v WriteDisplay@Value Value `uc  1 a 1 wreg ]
+[v WriteDisplay@Value Value `uc  1 a 1 wreg ]
+[v WriteDisplay@DisplayToWrite DisplayToWrite `uc  1 p 1 3 ]
+[v WriteDisplay@Value Value `uc  1 a 1 4 ]
+"60
+} 0
+"65
+[v _ConvertValue ConvertValue `(v  1 e 0 0 ]
+{
+[v ConvertValue@Value Value `uc  1 a 1 wreg ]
+[v ConvertValue@Value Value `uc  1 a 1 wreg ]
+"67
+[v ConvertValue@Value Value `uc  1 a 1 2 ]
+"74
+} 0
+"78 C:\Projetos - PIC\Gerenciador de Tarefas\ExTaskMgr\ExTaskMgr_PIC.X\MainTaskMng.c
+[v _ConfigTimer0 ConfigTimer0 `(v  1 e 0 0 ]
+{
+"100
+} 0
+"193
+[v _isr isr `II(v  1 e 0 0 ]
+{
+"195
+[v isr@i i `uc  1 a 1 7 ]
+"225
+} 0
