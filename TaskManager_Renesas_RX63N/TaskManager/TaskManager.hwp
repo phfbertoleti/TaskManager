@@ -1,0 +1,209 @@
+[HIMDBVersion]
+2.0
+[DATABASE_VERSION]
+"2.8" 
+[PROJECT_DETAILS]
+"ADC_Repeat" "W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat" "W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\ADC_Repeat.hwp" "RX" "Renesas RX Standard" "Application" "" "" 
+[INFORMATION]
+"No project information available" 
+[TOOL_CHAIN]
+"Renesas RX Standard Toolchain" "1.2.1.0" 
+[CONFIGURATIONS]
+"Debug" "W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\Debug" 
+[BUILD_PHASES]
+"Renesas OptLinker" 1 
+"Renesas RX Assembler" 1 
+"Renesas RX C/C++ Compiler" 1 
+"Renesas RX C/C++ Library Generator" 1 
+"Renesas RX Configurator" 1 
+[TOOL_ENVIRONMENT]
+[EXTENSIONS]
+"Absolute file" "ABS" 
+"Assembly include file" "INC" 
+"Assembly list file" "LST" 
+"Assembly source file" "S" 
+"Assembly source file" "SRC" 
+"Binary file" "BIN" 
+"C header file" "H" 
+"C source file" "C" 
+"C++ header file" "HPP" 
+"C++ source file" "CC" 
+"C++ source file" "CP" 
+"C++ source file" "CPP" 
+"CPU information file" "CPU" 
+"Calling information file" "CAL" 
+"Configuration file" "CFG" 
+"Debug information file" "DBG" 
+"Hex file" "HEX" 
+"Library file" "LIB" 
+"Library information file" "LBP" 
+"Linkage map file" "MAP" 
+"Linkage symbol file" "FSY" 
+"Object file" "OBJ" 
+"Optimize map file" "bls" 
+"Preprocessed C source file" "P" 
+"Preprocessed C++ source file" "PP" 
+"Relocatable file" "REL" 
+"Rts information file" "RTS" 
+"S-Record file" "MOT" 
+"Stack information file" "SNI" 
+"TD include object file" "RTI" 
+[FILE_GROUPS]
+"Absolute file" "BIN" "NONE" "" 
+"Assembly include file" "TEXT" "EDITOR" "" 
+"Assembly list file" "TEXT" "EDITOR" "" 
+"Assembly source file" "TEXT" "EDITOR" "" 
+"Binary file" "BIN" "NONE" "" 
+"C header file" "TEXT" "EDITOR" "" 
+"C source file" "TEXT" "EDITOR" "" 
+"C++ header file" "TEXT" "EDITOR" "" 
+"C++ source file" "TEXT" "EDITOR" "" 
+"CPU information file" "BIN" "NONE" "" 
+"Calling information file" "BIN" "NONE" "" 
+"Configuration file" "TEXT" "EDITOR" "" 
+"Debug information file" "BIN" "NONE" "" 
+"Hex file" "TEXT" "EDITOR" "" 
+"Library file" "BIN" "NONE" "" 
+"Library information file" "TEXT" "EDITOR" "" 
+"Linkage map file" "TEXT" "EDITOR" "" 
+"Linkage symbol file" "TEXT" "EDITOR" "" 
+"Object file" "BIN" "NONE" "" 
+"Optimize map file" "BIN" "NONE" "" 
+"Preprocessed C source file" "TEXT" "EDITOR" "" 
+"Preprocessed C++ source file" "TEXT" "EDITOR" "" 
+"Relocatable file" "BIN" "NONE" "" 
+"Rts information file" "BIN" "NONE" "" 
+"S-Record file" "TEXT" "EDITOR" "" 
+"Stack information file" "BIN" "NONE" "" 
+"TD include object file" "BIN" "NONE" "" 
+[ASSOCIATED_APPLICATIONS]
+[TOOLCHAIN_PHASE]
+"Renesas OptLinker" 
+"Renesas RX Assembler" 
+"Renesas RX C/C++ Compiler" 
+"Renesas RX C/C++ Library Generator" 
+"Renesas RX Configurator" 
+[UTILITY_PHASE]
+[CUSTOM_PHASES]
+[CUSTOM_PHASE_INPUT_GROUP]
+[CUSTOM_PHASE_OUTPUT_SYNTAX]
+[BUILD_ORDER]
+"Renesas RX C/C++ Library Generator" 1 
+"Renesas RX C/C++ Compiler" 1 
+"Renesas RX Assembler" 1 
+"Renesas OptLinker" 1 
+"Renesas RX Configurator" 0 
+[BUILD_PHASE_DETAILS]
+"Renesas OptLinker" "Object file|Library file|Relocatable file" 0 
+"Renesas RX Assembler" "Assembly source file|Linkage symbol file" 1 
+"Renesas RX C/C++ Compiler" "C source file|C++ source file" 1 
+"Renesas RX C/C++ Library Generator" "" 0 
+"Renesas RX Configurator" "Configuration file" 0 
+[BUILD_FILE_ORDER_Assembly source file]
+"Renesas RX Assembler" 1 
+[BUILD_FILE_ORDER_C source file]
+"Renesas RX C/C++ Compiler" 1 
+[BUILD_FILE_ORDER_C++ source file]
+"Renesas RX C/C++ Compiler" 1 
+[BUILD_FILE_ORDER_Linkage symbol file]
+"Renesas RX Assembler" 1 
+[SCRAP]
+"Project Generator Setup File" "" 
+[MAPPINGS]
+"Assembly source file" "Renesas RX Assembler" "Renesas RX C/C++ Compiler" 
+"Library file" "Renesas OptLinker" "Renesas RX C/C++ Library Generator" 
+"Object file" "Renesas OptLinker" "Renesas RX Assembler" 
+"Object file" "Renesas OptLinker" "Renesas RX C/C++ Compiler" 
+[PROJECT_FILES]
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\Docs\ecosystems.html" "User" "Ecosystem" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\dbsct.c" "User" "BSP" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\flash_options.c" "User" "BSP" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\hwsetup.c" "User" "BSP" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\lcd.c" "User" "BSP" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\lowlvl.src" "User" "Assembly source file" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\lowsrc.c" "User" "BSP" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\resetprg.c" "User" "BSP" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\sbrk.c" "User" "BSP" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\vecttbl.c" "User" "BSP" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_glyph\src\glyph\drivers\st7579_lcd.c" "User" "Packages|LCD" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_glyph\src\glyph\fonts\font_8x8.c" "User" "Packages|LCD" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_glyph\src\glyph\glyph.c" "User" "Packages|LCD" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_glyph\src\r_glyph.c" "User" "Packages|LCD" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_glyph\src\r_glyph_register.c" "User" "Packages|LCD" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_rspi_rx600\src\r_rspi_rx600.c" "User" "Packages|RSPI" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\src\CMT.c" "User" "C source file" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\src\S12ADC.c" "User" "C source file" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\src\adc_repeat_demo_main.c" "User" "C source file" 2 
+[FOLDER]
+"Assembly source file" "Assembly source file" 
+"BSP" "BSP" 
+"C source file" "C source file" 
+"Ecosystem" "Ecosystem" 
+"Packages" "Packages" 
+"Packages|LCD" "" 
+"Packages|RSPI" "" 
+[GENERAL_DATA_PROJECT]
+"USE_CUSTOM_LINKAGE_ORDER" "0" 
+[ON_DEMAND_COMPONENTS_LOADED]
+[SYNC_SESSION_NAMES]
+[SESSIONS]
+"DefaultSession" "W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\DefaultSession.hsf" 0 
+"JLink" "W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\JLink.hsf" 0 
+[GENERAL_DATA_SESSION_DefaultSession]
+[GENERAL_DATA_SESSION_JLink]
+[OPTIONS_Debug_Renesas OptLinker]
+"Single Shot" "03e951959a0fcc10" 5 
+[OPTIONS_Debug_Renesas RX Assembler]
+"Assembly source file" "0d3b65d6f80fcc10" 4 
+"Linkage symbol file" "0d3b65d6f80fcc10" 4 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\lowlvl.src" "0d3b65d6f80fcc10" 4 
+[OPTIONS_Debug_Renesas RX C/C++ Compiler]
+"C source file" "0670f0f2190fcc10" 2 
+"C++ source file" "0670f0f2190fcc10" 3 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\dbsct.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\flash_options.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\hwsetup.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\lcd.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\lowsrc.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\resetprg.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\sbrk.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_bsp\board\rdkrx63n\vecttbl.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_glyph\src\glyph\drivers\st7579_lcd.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_glyph\src\glyph\fonts\font_8x8.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_glyph\src\glyph\glyph.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_glyph\src\r_glyph.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_glyph\src\r_glyph_register.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\r_rspi_rx600\src\r_rspi_rx600.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\src\CMT.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\src\S12ADC.c" "0670f0f2190fcc10" 2 
+"W:\RDK_Updates\RX63N\Originals\Workspace\ADC_Repeat\ADC_Repeat\src\adc_repeat_demo_main.c" "0670f0f2190fcc10" 2 
+[OPTIONS_Debug_Renesas RX C/C++ Library Generator]
+"Single Shot" "0d3b65d6f80fcc10" 1 
+[OPTIONS_Debug_Renesas RX Configurator]
+"Single Shot" "0d3b65d6f80fcc10" 6 
+[OPTIONS_Debug]
+"" 0 
+"[V|VERSION|1] [B|COMMAND|1] [S|OUTPUTPATH|^"$(CONFIGDIR)^"] [S|SPEC|UITRON4] [S|CPU|RX600] [S|BASE|00000000=NONE]
+" 6 
+"[V|VERSION|1] [B|SJIS|1] [B|DEBUG|1] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).obj^"] [S|CPU|RX600] [S|BASE|00000000=NONE]
+" 4 
+"[V|VERSION|1] [S|LANG|C99] [B|SJIS|1] [S|INCLUDE|^"$(PROJDIR)\r_bsp^"|^"$(PROJDIR)\r_glyph^"|^"$(PROJDIR)\r_glyph\src^"|^"$(PROJDIR)\r_glyph\src\glyph^"|^"$(PROJDIR)\r_rspi_rx600^"|^"$(PROJDIR)\r_rspi_rx600\src^"|^"$(PROJDIR)\src^"] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).obj^"] [B|DEBUG|1] [B|SPEED|1] [B|MAP|0] [I|INLINE|100] [I|LOOP|2] [S|MISRA2004|ALL] [S|MISRA2004RULEFILE|^"$(CONFIGDIR)\$(PROJECTNAME).rde^"] [S|CPU|RX600] [S|BASE|00000000=NONE] [I|PID|16]
+" 2 
+"[V|VERSION|1] [S|LANG|CPP] [B|SJIS|1] [S|INCLUDE|^"$(PROJDIR)\r_bsp^"|^"$(PROJDIR)\r_glyph^"|^"$(PROJDIR)\r_glyph\src^"|^"$(PROJDIR)\r_glyph\src\glyph^"|^"$(PROJDIR)\r_rspi_rx600^"|^"$(PROJDIR)\r_rspi_rx600\src^"|^"$(PROJDIR)\src^"] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).obj^"] [B|DEBUG|1] [B|SPEED|1] [B|MAP|0] [I|INLINE|100] [I|LOOP|2] [S|MISRA2004|ALL] [S|MISRA2004RULEFILE|^"$(CONFIGDIR)\$(PROJECTNAME).rde^"] [S|CPU|RX600] [S|BASE|00000000=NONE] [I|PID|16]
+" 3 
+"[V|VERSION|1] [S|MODE|BUILD/CHANGED] [S|EXISTOUTPUTPATH|^"$(CONFIGDIR)\$(PROJECTNAME).lib^"] [S|LANG|C99] [B|RUNTIME|1] [B|STDIO|1] [B|STDLIB|1] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(PROJECTNAME).lib^"] [B|SIZE|1] [I|INLINE|100] [I|LOOP|2] [S|CPU|RX600] [S|BASE|00000000=NONE] [I|PID|16]
+" 1 
+"[V|VERSION|6] [S|FORM|STYPE] [S|BYTE_COUNT_VALUE|FF] [B|DEBUG|1] [S|ROM|(D,R)|(D_1,R_1)|(D_2,R_2)] [S|CRC|NONE|DEFAULT|00000000] [S|VECT|_undefined_interrupt_source_isr] [B|LIST|1] [S|LIST|^"$(CONFIGDIR)\$(PROJECTNAME).map^"] [S|SHOW|METHODCUSTOM|] [S|OUTPUT|^"$(CONFIGDIR)\$(PROJECTNAME).mot^"] [I|SPACE|^"FF^"] [B|OPTIMIZE|0] [S|START|SI,SU,B_1,R_1,B_2,R_2,B,R(00)|C_1,C_2,C,C$*,L*,D*,P,W*(0FFF80000)|FIXEDVECT(0FFFFFF90)] [S|MEMORY|HIGH]
+" 5 
+[EXCLUDED_FILES_Debug]
+[LINKAGE_ORDER_Debug]
+[GENERAL_DATA_CONFIGURATION_Debug]
+[GENERAL_DATA_CONFIGURATION_SESSION_Debug_DefaultSession]
+[SESSION_DATA_CONFIGURATION_SESSION_Debug_DefaultSession]
+"MEMORY_MAPPING_OPTIONS" "" 
+[GENERAL_DATA_CONFIGURATION_SESSION_Debug_JLink]
+[SESSION_DATA_CONFIGURATION_SESSION_Debug_JLink]
+"MEMORY_MAPPING_OPTIONS" "" 
+[EXT_DEBUGGER_INFO]
+0 "" "" "" "" 
+[END]
